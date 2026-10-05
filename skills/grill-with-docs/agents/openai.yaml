@@ -1,5 +1,5 @@
 interface:
-  display_name: "Grill With Docs"
-  short_description: "A relentless interview that also builds CONTEXT.md and ADRs."
+  display_name: "Grill with Docs"
+  short_description: "Grill a design and write its docs"
 policy:
   allow_implicit_invocation: false

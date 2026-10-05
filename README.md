@@ -112,7 +112,10 @@ both (confirmed by reading `codex-rs/skills/src/parser.rs`: it only reads
 skills using `disable-model-invocation: true` (grill-me, grill-with-docs,
 handoff, teach) each got a companion `agents/openai.yaml` — the one file Codex
 reads natively to replicate that behavior (real schema, not a third-party
-convention: `policy.allow_implicit_invocation: false`). Kiro has no equivalent
+convention: `policy.allow_implicit_invocation: false`). The other four
+mattpocock skills (grilling, domain-modeling, codebase-design, research) ship an
+`agents/openai.yaml` too, carrying only display metadata (`display_name`,
+`short_description`) with no policy, matching upstream. Kiro has no equivalent
 mechanism: any skill there can be auto-invoked from its description at any
 time, so those four skills are "best effort" on Kiro, not "guaranteed manual."
 
@@ -121,20 +124,26 @@ time, so those four skills are "best effort" on Kiro, not "guaranteed manual."
 ### From `mattpocock/skills` (MIT)
 
 - `grill-me/` — a relentless interview to sharpen a plan or decision. Depends
-  on `grilling/`. Ships `agents/openai.yaml` (manual-only invocation on Codex).
+  on `grilling/`.
 - `grilling/` — the reusable interview skill behind grill-me.
-- `grill-with-docs/` — same as grill-me, but also maintains `CONTEXT.md`/ADRs.
-  Depends on `grilling/` and `domain-modeling/`. Ships `agents/openai.yaml`.
+- `grill-with-docs/` — same as grill-me, but also maintains `GLOSSARY.md`/ADRs.
+  Depends on `grilling/` and `domain-modeling/`.
 - `domain-modeling/` — builds and sharpens a project's domain model (glossary
   + ADRs).
 - `handoff/` — compacts the current conversation into a handoff document for
-  another agent to continue. Ships `agents/openai.yaml`.
+  another agent to continue.
 - `teach/` — teaches the user a topic across multiple sessions, using the
-  current directory as a stateful learning workspace. Ships
-  `agents/openai.yaml`.
+  current directory as a stateful learning workspace.
 - `codebase-design/` — shared vocabulary for deep modules, seams, adapters.
 - `research/` — spins up a background agent to investigate something against
   primary sources.
+
+All eight ship an `agents/openai.yaml` for Codex (display name and short
+description; the four manual-only skills also set
+`policy.allow_implicit_invocation: false`). Last synced with upstream v1.3.1
+(2026-10-05), which renamed the `CONTEXT.md`/`CONTEXT-MAP.md` convention to
+`GLOSSARY.md`/`GLOSSARY-MAP.md`; a project that already has a `CONTEXT.md`
+written by these skills needs `git mv CONTEXT.md GLOSSARY.md`.
 
 ### From `anthropics/claude-code` (plugin `frontend-design`)
 
