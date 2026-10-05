@@ -14,7 +14,8 @@ cross-wired to work the way I work, across whichever of **Claude Code**,
   Claude Code, Codex, and Kiro each see the same skills without three copies
   of the content.
 - `setup.sh` — installs the skills (and, optionally, the curated plugins)
-  into your actual tool config, not just inside this repo.
+  into your actual tool config, not just inside this repo. Skills land there
+  as real copies, not symlinks.
 
 ## Quick start
 
@@ -28,17 +29,27 @@ cd gonzales-skills-harness
 ./setup.sh --all --dry-run       # show what it would do, change nothing
 ```
 
-Skills are installed as **user-scope symlinks** pointing back at this clone
-(`~/.claude/skills`, `~/.agents/skills` for Codex, `~/.kiro/skills`), so they
-work in every project afterward, not just inside this repo. Plugins are
-installed with `claude plugin install ... --scope user -y` and
-`codex plugin add ...` — the same commands listed in the tables below, just
-automated. Kiro has no plugin system, so it never enters that part.
+Skills are installed as **user-scope copies** (`~/.claude/skills`,
+`~/.agents/skills` for Codex, `~/.kiro/skills`), so they work in every project
+afterward, not just inside this repo, and keep working even if you move or
+delete this clone. Because they are copies, **edits in `skills/` only reach
+the global install when you re-run `./setup.sh`**. Plugins are installed with
+`claude plugin install ... --scope user -y` and `codex plugin add ...` — the
+same commands listed in the tables below, just automated. Kiro has no plugin
+system, so it never enters that part.
 
-Re-running the script is safe: it never duplicates a marketplace registration
-or a plugin install (both are idempotent), and if it finds something at the
-destination that isn't already the right symlink, it moves it aside as
-`.bak-<timestamp>` instead of overwriting it.
+Re-running the script is safe. Every copy it makes carries a
+`.installed-from` marker file (containing the source path), which is how it
+tells its own installs apart from anything else at the destination:
+
+- its own copies are refreshed when the source changed and left alone when it
+  didn't;
+- symlinks left behind by older versions of this script (which used to link
+  instead of copy) are replaced by copies;
+- anything else found at the destination is moved aside as `.bak-<timestamp>`
+  instead of being overwritten;
+- marketplace registrations and plugin installs are never duplicated (both
+  commands are idempotent).
 
 ## How it works
 
@@ -46,7 +57,9 @@ All three tools implement the same open Agent Skills spec
 (agentskills.io/specification): a directory named after the skill, containing
 a `SKILL.md` with `name` + `description` frontmatter. What differs between
 them is **where each one looks for that directory**, not the file format —
-so one canonical copy plus three symlink trees covers all of them:
+so one canonical source covers all of them. Inside this repo (project scope)
+that is done with three symlink trees; in your home directory (user scope)
+`setup.sh` makes real copies.
 
 - `skills/<name>/` — the source. Edit here.
 - `.claude/skills/<name>` → symlink to `../../skills/<name>` (Claude Code,
@@ -57,14 +70,18 @@ so one canonical copy plus three symlink trees covers all of them:
 - `.kiro/skills/<name>` → symlink to `../../skills/<name>` (Kiro workspace
   skills; confirmed against a real Kiro install).
 
-Editing `skills/<name>/SKILL.md` propagates instantly to all three tools —
-zero content duplication. Git tracks these as real symlinks (mode `120000`),
-so a clone on macOS/Linux just works. **Caveat:** symlinks don't survive a
-`git clone` on Windows without `git config core.symlinks true` (and Developer
-Mode / admin rights) — without that, they land as text files containing a
-path instead of directories.
+Editing `skills/<name>/SKILL.md` propagates instantly to all three tools
+**when they run inside this repo** — zero content duplication at project
+scope. The user-scope copies in your home directory are independent files:
+re-run `./setup.sh` after editing to refresh them. Git tracks the in-repo
+trees as real symlinks (mode `120000`), so a clone on macOS/Linux just works.
+**Caveat:** symlinks don't survive a `git clone` on Windows without
+`git config core.symlinks true` (and Developer Mode / admin rights) — without
+that, they land as text files containing a path instead of directories. The
+user-scope install is not affected, since `setup.sh` copies.
 
-`skills/reflect/` is deliberately **not** in any of the three symlink trees.
+`skills/reflect/` is deliberately **not** in any of the three symlink trees,
+and `setup.sh` skips it as well.
 Its body is written for OpenCode specifically (mentions `oh-my-opencode-slim`,
 OpenCode logs), so surfacing it in Claude Code, Codex, or Kiro would instruct
 the agent about a tool it isn't running. The frontmatter format is compatible;
@@ -149,7 +166,8 @@ time, so those four skills are "best effort" on Kiro, not "guaranteed manual."
   system can reveal that, when to add a verification affordance, when to
   research before committing to an approach) before implementing.
 - `reflect/` — kept for the record but deliberately excluded from the symlink
-  farms (see "How it works" above): its body targets OpenCode specifically.
+  farms and from `setup.sh` (see "How it works" above): its body targets
+  OpenCode specifically.
 
 This source has no explicit license file. Its own README says these are
 "Fabio Akita's personal skills... published for reference and inspiration"
