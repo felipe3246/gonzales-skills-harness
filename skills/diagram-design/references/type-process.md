@@ -185,7 +185,7 @@ Three styles, bound to topology. Connectors drawn **before** all node rects (z-o
 </defs>
 ```
 
-### 3.1 Routing rules (non-negotiable)
+### 3.1 Routing rules
 
 **Single-bend right-angle:** exit RIGHT → corridor → enter TOP (↓ destination below) or BOTTOM (↑ destination above).
 

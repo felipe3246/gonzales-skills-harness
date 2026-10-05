@@ -179,7 +179,7 @@ Stroke: `rgba(45,49,66,0.18)`, `stroke-width=0.8`, `rx=4`. Fill: `rgba(45,49,66,
 ```
 node_w             = 152
 node_h             = 80                            # focal same height, accent border
-node_cx(N)         = chevron_cx(N.chevron)         # ← non-negotiable
+node_cx(N)         = chevron_cx(N.chevron)         # ← fixed
 node_x(N)          = node_cx(N) - node_w/2
 ```
 
@@ -240,7 +240,7 @@ Vertical chevrons honor the per-chevron `color` override documented in §2.2 —
 
 ## 3. Connector rules (mandatory)
 
-These are non-negotiable. Pick the style **automatically** from the topology — do not let the user override style on focal-touching or bar-originating edges.
+Pick the style **automatically** from the topology — do not let the user override style on focal-touching or bar-originating edges.
 
 | `style` | Stroke | Width | Dash | Marker | When required |
 |---|---|---|---|---|---|
@@ -260,7 +260,7 @@ These are non-negotiable. Pick the style **automatically** from the topology —
 </defs>
 ```
 
-### 3.1 Exit / entry sides (non-negotiable)
+### 3.1 Exit / entry sides
 
 | Edge kind | Exit side of source | Entry side of target |
 |---|---|---|

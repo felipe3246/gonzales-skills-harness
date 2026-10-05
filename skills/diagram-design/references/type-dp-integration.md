@@ -216,7 +216,7 @@ Five styles, bound to topology. Don't let user override style on focal-touching,
 </defs>
 ```
 
-### 3.1 Exit / entry sides (non-negotiable)
+### 3.1 Exit / entry sides
 
 | Edge kind | Exit side of source | Entry side of target |
 |---|---|---|

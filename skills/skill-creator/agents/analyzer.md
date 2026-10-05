@@ -155,13 +155,8 @@ Write a JSON file with this structure:
 
 ## Guidelines
 
-- **Be specific**: Quote from skills and transcripts, don't just say "instructions were unclear"
-- **Be actionable**: Suggestions should be concrete changes, not vague advice
-- **Focus on skill improvements**: The goal is to improve the losing skill, not critique the agent
-- **Prioritize by impact**: Which changes would most likely have changed the outcome?
-- **Consider causation**: Did the skill weakness actually cause the worse output, or is it incidental?
-- **Stay objective**: Analyze what happened, don't editorialize
-- **Think about generalization**: Would this improvement help on other evals too?
+- **Quote from skills and transcripts** rather than saying "instructions were unclear"; suggestions are concrete changes to the losing skill, not critiques of the agent.
+- **Check causation and generalization**: did the skill weakness actually cause the worse output, and would the fix help on other evals too?
 
 ## Categories for Suggestions
 
@@ -261,14 +256,5 @@ Save notes to `{output_path}` as a JSON array of strings:
 
 ## Guidelines
 
-**DO:**
-- Report what you observe in the data
-- Be specific about which evals, expectations, or runs you're referring to
-- Note patterns that aggregate metrics would hide
-- Provide context that helps interpret the numbers
-
-**DO NOT:**
-- Suggest improvements to the skill (that's for the improvement step, not benchmarking)
-- Make subjective quality judgments ("the output was good/bad")
-- Speculate about causes without evidence
-- Repeat information already in the run_summary aggregates
+- Name the evals, expectations, or runs each note refers to, and stick to patterns the run_summary aggregates would hide.
+- This step reports observations: skill improvements belong to the improvement step, and quality judgments about individual outputs belong to the comparator.

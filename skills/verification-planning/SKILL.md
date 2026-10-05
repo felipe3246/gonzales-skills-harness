@@ -68,8 +68,9 @@ its stakes, and any needed affordance has a defined lifecycle.
 ## 4. Research when the path is unknown
 
 When the right evidence path depends on an unfamiliar dependency, framework,
-external service, or rapidly changing capability, ask `@librarian` for focused
-research before committing to an approach.
+external service, or rapidly changing capability, delegate focused research to
+a sub-agent (the `research` skill in this collection does this against primary
+sources) before committing to an approach.
 
 Ask for official or project-specific facilities, constraints, and trade-offs
 that affect this exact verification problem. Use existing project evidence

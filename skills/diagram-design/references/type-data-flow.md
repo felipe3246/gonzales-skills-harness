@@ -184,7 +184,7 @@ Four styles, bound to topology. Connectors are drawn **before** all node rects (
 </defs>
 ```
 
-### 3.1 Routing rules (non-negotiable)
+### 3.1 Routing rules
 
 - **Single-bend routing:** horizontal-first, then vertical. Exit a node from the **right edge**; enter from the **left** (same-lane horizontal) or **top/bottom** (cross-lane vertical).
 - **No diagonals.** Bends use an 8-px Q-bezier corner.
@@ -299,7 +299,7 @@ Before emitting SVG, verify **every** item:
 
 ## 8. Data-type chips reference (input + output)
 
-Small `16×8 rx=3` badges at the bottom of each node, one for input and one for output. Position is **non-negotiable**:
+Small `16×8 rx=3` badges at the bottom of each node, one for input and one for output. Position is fixed:
 
 - **Input chip** at `(node_x+4, node_y+54)` — bottom-**left** of the node. Represents the payload format *entering* the node from upstream.
 - **Output chip** at `(node_x+80, node_y+54)` — bottom-**right** of the node. Represents the payload format *leaving* the node toward downstream.

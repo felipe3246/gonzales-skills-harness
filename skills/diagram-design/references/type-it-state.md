@@ -236,7 +236,7 @@ A connector can override via `connectors[k].from_side` / `connectors[k].to_side`
 
 ### 3.3 Markers MUST touch the destination rectangle
 
-The path's last command ends at the destination's rectangle edge (`V {dst_top}` or `H {dst_left}`), **not** at the centroid. After applying `refX=7` on the marker, the triangle sits flush against the border. Stopping the line short of the edge — or sending it to the centroid and burying the arrowhead inside the rect — is a hard fail.
+The path's last command ends at the destination's rectangle edge (`V {dst_top}` or `H {dst_left}`), **not** at the centroid. After applying `refX=7` on the marker, the triangle sits flush against the border. Don't stop the line short of the edge, and don't send it to the centroid, which buries the arrowhead inside the rect.
 
 ### 3.4 Style → stroke + marker
 
