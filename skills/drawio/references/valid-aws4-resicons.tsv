@@ -1,0 +1,558 @@
+# Valid AWS4 resIcon names (generated from draw.io official shape index)
+# Format: resIcon_name<TAB>shape_picker_title<TAB>official_fillColor
+# Total: 554
+
+action	Action	#ffffff
+activate	Activate	#C925D1
+actuator	Actuator	#ffffff
+addon	Addon	#ffffff
+agent	Agent	#ffffff
+alarm	Alarm	#ffffff
+alexa_enabled_device	Alexa Enabled Device	#ffffff
+alexa_for_business	Alexa for Business	#DD344C
+alexa_skill	Alexa Skill	#ffffff
+alexa_smart_home_skill	Alexa Smart Home Skill	#ffffff
+alexa_voice_service	Alexa Voice Service	#ffffff
+all_products	All Products	#1E262E
+ami	Ami	#ffffff
+amplify	Amplify	#DD344C
+analytics	Analytics	#8C4FFF
+apache_mxnet_on_aws	Apache MXNet on AWS	#01A88D
+api_gateway	API Gateway	#E7157B
+app_config	App Config	#E7157B
+app_mesh	App Mesh	#8C4FFF
+app_runner	App Runner	#ED7100
+app_studio	App Studio	#01A88D
+app_wizard	Launch Wizard	#E7157B
+appfabric	AppFabric	#DD344C
+appflow	AppFlow	#E7157B
+application	Application	#ffffff
+application_auto_scaling	Application Auto Scaling	#E7157B
+application_composer	Infrastructure Composer	#C925D1
+application_cost_profiler	Application Cost Profiler	#7AA116
+application_discovery_service	Application Discovery Service	#01A88D
+application_integration	Application Integration	#E7157B
+application_recovery_controller	Application Recovery Controller	#8C4FFF
+apps	Apps	#ffffff
+appstream_20	Appstream 2.0	#01A88D
+appsync	AppSync	#E7157B
+ar_vr	AR & VR	#BC1356
+archive	Archive	#ffffff
+artifact	Artifact	#DD344C
+athena	Athena	#8C4FFF
+attribute	Attribute	#ffffff
+attributes	Attributes	#ffffff
+audit_manager	Audit Manager	#DD344C
+augmented_ai	Augmented AI	#01A88D
+aurora	Aurora	#C925D1
+auto_scaling	Auto Scaling	#ffffff
+auto_scaling2	EC2 Auto Scaling	#ED7100
+auto_scaling3	Auto Scaling	#ED7100
+automation	Automation	#ffffff
+autoscaling	Auto Scaling	#E7157B
+aws_cloud	Aws Cloud	#ffffff
+b2b_data_interchange	B2B Data Interchange	#E7157B
+backint_agent	Backint Agent	#E7157B
+backup	Backup	#7AA116
+bank	Bank	#ffffff
+batch	Batch	#ED7100
+bedrock	Bedrock	#01A88D
+bedrock_agentcore	Bedrock AgentCore	#01A88D
+blockchain	Blockchain	#ED7100
+bottlerocket	Bottlerocket	#ED7100
+braket	Braket	#ED7100
+bucket	Bucket	#ffffff
+bucket_with_objects	Bucket With Objects	#ffffff
+budgets_2	Budgets	#7AA116
+business_application	Business Application	#DD344C
+bycicle	Bycicle	#ffffff
+cache_node	Cache Node	#ffffff
+cached_volume	Cached Volume	#ffffff
+camera	Camera	#ffffff
+car	Car	#ffffff
+cart	Cart	#ffffff
+certificate_manager	Certificate Manager	#ffffff
+certificate_manager_2	Certificate Manager 2	#ffffff
+certificate_manager_3	Certificate Manager	#DD344C
+change_set	Change Set	#ffffff
+chatbot	Chatbot	#E7157B
+checklist	Checklist	#ffffff
+checklist_cost	Checklist Cost	#ffffff
+checklist_fault_tolerant	Checklist Fault Tolerant	#ffffff
+checklist_performance	Checklist Performance	#ffffff
+checklist_security	Checklist Security	#ffffff
+chime	Chime	#DD344C
+chime_sdk	Chime SDK	#DD344C
+clean_rooms	Clean Rooms	#8C4FFF
+client	Client	#ffffff
+client_vpn	Client VPN	#8C4FFF
+cloud9	Cloud9	#C925D1
+cloud_control_api	Cloud Control API	#C925D1
+cloud_development_kit	Cloud Development Kit	#C925D1
+cloud_directory	Cloud Directory	#8C4FFF
+cloud_map	Cloud Map	#8C4FFF
+cloud_wan	Cloud WAN	#8C4FFF
+cloudendure_disaster_recovery	Elastic Disaster Recovery	#7AA116
+cloudendure_migration	Application Migration Service	#01A88D
+cloudformation	CloudFormation	#E7157B
+cloudfront	CloudFront	#8C4FFF
+cloudhsm	CloudHSM	#DD344C
+cloudsearch2	CloudSearch	#8C4FFF
+cloudshell	CloudShell	#C925D1
+cloudtrail	CloudTrail	#E7157B
+cloudwatch_2	CloudWatch	#E7157B
+cluster	Cluster	#ffffff
+codeartifact	CodeArtifact	#C925D1
+codebuild	CodeBuild	#C925D1
+codecatalyst	CodeCatalyst	#C925D1
+codecommit	CodeCommit	#C925D1
+codedeploy	CodeDeploy	#C925D1
+codeguru	CodeGuru	#E7157B
+codeguru_2	CodeGuru	#01A88D
+codepipeline	CodePipeline	#C925D1
+codestar	CodeStar	#C925D1
+codewhisperer	CodeWhisperer	#01A88D
+coffee_pot	Coffee Pot	#ffffff
+cognito	Cognito	#DD344C
+command_line_interface	Command Line Interface	#C925D1
+comprehend	Comprehend	#01A88D
+comprehend_medical	Comprehend Medical	#01A88D
+compute	Compute	#ED7100
+compute_optimizer	Compute Optimizer	#ED7100
+config	Config	#E7157B
+connect	Connect	#DD344C
+contact_center	Contact Center	#DD344C
+container_1	Container 1	#ffffff
+container_2	Container 2	#ffffff
+container_3	Container 3	#ffffff
+containers	Containers	#ED7100
+control_tower	Control Tower	#E7157B
+corporate_data_center	Corporate Data Center	#ffffff
+corretto	Corretto	#C925D1
+cost_and_usage_report	Cost & Usage Report	#7AA116
+cost_explorer	Cost Explorer	#7AA116
+cost_management	Cost Management	#7AA116
+custom_billing_manager	Billing Conductor	#7AA116
+customer_enablement	Customer Enablement	#C925D1
+customer_engagement	Customer Engagement	#3334B9
+customer_gateway	Customer Gateway	#ffffff
+data_encryption_key	Data Encryption Key	#ffffff
+data_exchange	Data Exchange	#8C4FFF
+data_pipeline	Data Pipeline	#8C4FFF
+data_transfer_terminal	Data Transfer Terminal	#01A88D
+database	Database	#C925D1
+database_migration_service	Database Migration Service	#C925D1
+database_migration_workflow_job	Database Migration Workflow Job	#ffffff
+datasync	DataSync	#01A88D
+datazone	DataZone	#8C4FFF
+db_instance	Db Instance	#ffffff
+db_instance_read_replica	Db Instance Read Replica	#ffffff
+db_instance_standby	Db Instance Standby	#ffffff
+db_on_instance	Db On Instance	#ffffff
+deadline_cloud	Deadline Cloud	#ED7100
+deep_learning_amis	Deep Learning AMIs	#01A88D
+deep_learning_containers	Deep Learning Containers	#01A88D
+deepcomposer	DeepComposer	#01A88D
+deeplens	DeepLens	#01A88D
+deepracer	DeepRacer	#01A88D
+dense_compute_node	Dense Compute Node	#ffffff
+dense_storage_node	Dense Storage Node	#ffffff
+deployment	Deployment	#ffffff
+deployments	Deployments	#ffffff
+desired_state	Desired State	#ffffff
+desktop_and_app_streaming	End User Computing	#01A88D
+detective	Detective	#DD344C
+developer_tools	Developer Tools	#C925D1
+device_farm	Device Farm	#DD344C
+devops_agent	DevOps Agent	#E7157B
+devops_guru	DevOps Guru	#01A88D
+direct_connect	Direct Connect	#8C4FFF
+directory_service	Directory Service	#DD344C
+disk	Disk	#ffffff
+distro_for_opentelemetry	Distro for OpenTelemetry	#E7157B
+documentdb_with_mongodb_compatibility	DocumentDB	#C925D1
+documents	Documents	#ffffff
+door_lock	Door Lock	#ffffff
+download_distribution	Download Distribution	#ffffff
+dynamodb	DynamoDB	#C925D1
+ec2	EC2	#ED7100
+ec2_image_builder	EC2 Image Builder	#ED7100
+echo	Echo	#ffffff
+ecr	Elastic Container Registry	#ED7100
+ecs	Elastic Container Service	#ED7100
+ecs_anywhere	ECS Anywhere	#ED7100
+edge_location	Edge Location	#ffffff
+efs_infrequentaccess	EFS InfrequentAccess	#7AA116
+efs_standard	EFS Standard	#7AA116
+eks	Elastic Kubernetes Service	#ED7100
+eks_anywhere	EKS Anywhere	#ED7100
+eks_cloud	EKS Cloud	#ED7100
+eks_distro	EKS Distro	#ED7100
+elastic_beanstalk	Elastic Beanstalk	#ED7100
+elastic_block_store	Elastic Block Store	#7AA116
+elastic_fabric_adapter	Elastic Fabric Adapter	#ED7100
+elastic_file_system	Elastic File System	#7AA116
+elastic_inference_2	Elastic Inference	#01A88D
+elastic_ip_address	Elastic Ip Address	#ffffff
+elastic_load_balancing	Elastic Load Balancing	#ED7100
+elastic_network_adapter	Elastic Network Adapter	#ffffff
+elastic_network_interface	Elastic Network Interface	#ffffff
+elastic_transcoder	Elastic Transcoder	#ED7100
+elastic_vmware_service	Elastic VMware Service	#ED7100
+elasticache	ElastiCache	#C925D1
+elasticsearch_service	OpenSearch Service	#8C4FFF
+elemental	Elemental Appliances & Software	#ED7100
+elemental_link	Elemental Link	#ED7100
+elemental_mediaconnect	Elemental MediaConnect	#ED7100
+elemental_mediaconvert	Elemental MediaConvert	#ED7100
+elemental_medialive	Elemental MediaLive	#ED7100
+elemental_mediapackage	Elemental MediaPackage	#ED7100
+elemental_mediastore	Elemental MediaStore	#ED7100
+elemental_mediatailor	Elemental MediaTailor	#ED7100
+email	Email	#ffffff
+email_notification	Email Notification	#ffffff
+emr	EMR	#8C4FFF
+emr_engine	Emr Engine	#ffffff
+emr_engine_mapr_m3	Emr Engine Mapr M3	#ffffff
+emr_engine_mapr_m5	Emr Engine Mapr M5	#ffffff
+emr_engine_mapr_m7	Emr Engine Mapr M7	#ffffff
+encrypted_data	Encrypted Data	#ffffff
+end_user_messaging	End User Messaging	#DD344C
+endpoints	Endpoints	#ffffff
+entity_resolution	Entity Resolution	#8C4FFF
+event_event_based	Event Event Based	#ffffff
+event_time_based	Event Time Based	#ffffff
+eventbridge	EventBridge	#E7157B
+express_workflow	Express Workflows	#E7157B
+factory	Factory	#ffffff
+fargate	Fargate	#ED7100
+fault_injection_simulator	Fault Injection Service	#C925D1
+file_cache	File Cache	#7AA116
+filtering_rule	Filtering Rule	#ffffff
+finspace	FinSpace	#8C4FFF
+firetv	Firetv	#ffffff
+firetv_stick	Firetv Stick	#ffffff
+firewall_manager	Firewall Manager	#DD344C
+flow_logs	Flow Logs	#ffffff
+forecast	Forecast	#01A88D
+forums	Forums	#ffffff
+fraud_detector	Fraud Detector	#01A88D
+freertos	FreeRTOS	#7AA116
+fsx	FSx	#7AA116
+fsx_for_lustre	FSx for Lustre	#7AA116
+fsx_for_netapp_ontap	FSx for NetApp ONTAP	#7AA116
+fsx_for_openzfs	FSx for OpenZFS	#7AA116
+fsx_for_windows_file_server	FSx for Windows File Server	#7AA116
+gamekit	GameKit	#8C4FFF
+gamelift_2	GameLift	#8C4FFF
+gamelift_streams	GameLift Streams	#8C4FFF
+games	Game Tech	#8C4FFF
+gamesparks	GameSparks	#8C4FFF
+general	General	#1E262E
+generic	Generic	#ffffff
+generic_database	Generic Database	#ffffff
+genomics_cli	Genomics CLI	#ED7100
+glacier	S3 Glacier	#7AA116
+global_accelerator	Global Accelerator	#8C4FFF
+global_secondary_index	Global Secondary Index	#ffffff
+glue	Glue	#8C4FFF
+glue_databrew	Glue DataBrew	#8C4FFF
+glue_elastic_views	Glue Elastic Views	#8C4FFF
+greengrass	Greengrass	#7AA116
+ground_station	Ground Station	#C925D1
+guardduty	GuardDuty	#DD344C
+hardware_board	Hardware Board	#ffffff
+hdfs_cluster	Hdfs Cluster	#ffffff
+healthimaging	HealthImaging	#01A88D
+healthlake	HealthLake	#01A88D
+healthscribe	HealthScribe	#01A88D
+honeycode	Honeycode	#DD344C
+hosted_zone	Hosted Zone	#ffffff
+house	House	#ffffff
+http2_protocol	Http2 Protocol	#ffffff
+http_notification	Http Notification	#ffffff
+http_protocol	Http Protocol	#ffffff
+identity_and_access_management	Identity & Access Management	#DD344C
+import_export	Import Export	#ffffff
+infrequent_access_storage_class	Infrequent Access Storage Class	#7AA116
+inspector	Inspector	#DD344C
+instance	Instance	#ffffff
+instance_with_cloudwatch	Instance With Cloudwatch	#ffffff
+instances	Instances	#ffffff
+instances_2	Instances 2	#ffffff
+interactive_video	Interactive Video Service	#ED7100
+internet	Internet	#ffffff
+internet_alt1	Internet Alt1	#ffffff
+internet_alt2	Internet Alt2	#ffffff
+internet_gateway	Internet Gateway	#ffffff
+internet_of_things	Internet of Things	#7AA116
+inventory	Inventory	#ffffff
+iot_1click	1Click	#7AA116
+iot_analytics	Analytics	#7AA116
+iot_button	Button	#7AA116
+iot_core	Core	#7AA116
+iot_device_defender	Device Defender	#7AA116
+iot_device_management	Device Management	#7AA116
+iot_edukit	EduKit	#7AA116
+iot_events	Events	#7AA116
+iot_expresslink	ExpressLink	#7AA116
+iot_fleetwise	FleetWise	#7AA116
+iot_roborunner	RoboRunner	#7AA116
+iot_sitewise	SiteWise	#7AA116
+iot_things_graph	Graph	#7AA116
+iot_twinmaker	TwinMaker	#7AA116
+iq	IQ	#C925D1
+item	Item	#ffffff
+items	Items	#ffffff
+kendra	Kendra	#01A88D
+key_management_service	Key Management Service	#DD344C
+keyspaces	Keyspaces	#C925D1
+kinesis	Kinesis	#8C4FFF
+kinesis_data_analytics	Kinesis Data Analytics	#8C4FFF
+kinesis_data_firehose	Data Firehose	#8C4FFF
+kinesis_data_streams	Kinesis Data Streams	#8C4FFF
+kinesis_video_streams	Kinesis Video Streams	#8C4FFF
+lake_formation	Lake Formation	#8C4FFF
+lambda	Lambda	#ED7100
+lambda_function	Lambda Function	#ffffff
+layers	Layers	#ffffff
+lex	Lex	#01A88D
+license_manager	License Manager	#E7157B
+lightbulb	Lightbulb	#ffffff
+lightsail	Lightsail	#ED7100
+lightsail_for_research	Lightsail for Research	#ED7100
+local_zones	Local Zones	#ED7100
+location_service	Location Service	#DD344C
+long_term_security_credential	Long Term Security Credential	#ffffff
+lookout_for_equipment	Lookout for Equipment	#01A88D
+lookout_for_metrics	Lookout for Metrics	#01A88D
+lookout_for_vision	Lookout for Vision	#01A88D
+lumberyard	Lumberyard	#8C4FFF
+machine_learning	Machine Learning	#01A88D
+macie	Macie	#DD344C
+mainframe_modernization	Mainframe Modernization	#01A88D
+maintenance_windows	Maintenance Windows	#ffffff
+managed_apache_cassandra_service	Managed Apache Cassandra Service	#C925D1
+managed_blockchain	Managed Blockchain	#ED7100
+managed_service_for_apache_flink	Managed Service for Apache Flink	#8C4FFF
+managed_service_for_grafana	Managed Grafana	#E7157B
+managed_service_for_prometheus	Managed Service for Prometheus	#E7157B
+managed_services	Managed Services	#C925D1
+managed_streaming_for_kafka	Managed Streaming for Apache Kafka	#8C4FFF
+managed_workflows_for_apache_airflow	Managed Workflows for Apache Airflow	#E7157B
+management_and_governance	Management & Governance	#E7157B
+management_console	Management Console	#E7157B
+marketplace	Marketplace	#1E262E
+media_services	Media Services	#ED7100
+medical_emergency	Medical Emergency	#ffffff
+memorydb_for_redis	MemoryDB	#C925D1
+message	Message	#ffffff
+mfa_token	Mfa Token	#ffffff
+migration_and_transfer	Migration & Transfer	#01A88D
+migration_evaluator	Migration Evaluator	#01A88D
+migration_hub	Migration Hub	#01A88D
+mobile	Mobile	#DD344C
+mobile_application	Console Mobile Application	#E7157B
+mobile_client	Mobile Client	#ffffff
+monitoring	Monitoring	#ffffff
+monitron	Monitron	#01A88D
+mq	MQ	#E7157B
+mqtt_protocol	Mqtt Protocol	#ffffff
+ms_sql_instance	Ms Sql Instance	#ffffff
+ms_sql_instance_alternate	Ms Sql Instance Alternate	#ffffff
+multimedia	Multimedia	#ffffff
+mysql_db_instance	Mysql Db Instance	#ffffff
+mysql_db_instance_alternate	Mysql Db Instance Alternate	#ffffff
+nat_gateway	Nat Gateway	#ffffff
+neptune	Neptune	#C925D1
+network_access_control_list	Network Access Control List	#ffffff
+network_firewall	Network Firewall	#DD344C
+networking_and_content_delivery	Networking and Content Delivery	#8C4FFF
+neuron_ml_sdk	Neuron	#01A88D
+nice_dcv	DCV	#ED7100
+nice_enginframe	Nice EnginFrame	#ED7100
+nimble_studio	Nimble Studio	#ED7100
+nitro_enclaves	Nitro Enclaves	#ED7100
+non_cached_volume	Non Cached Volume	#ffffff
+nova2	Nova	#01A88D
+object	Object	#ffffff
+office_building	Office Building	#ffffff
+omics	HealthOmics	#01A88D
+open_3d_engine_2	Open 3D Engine	#8C4FFF
+opsworks	OpsWorks	#E7157B
+optimized_instance	Optimized Instance	#ffffff
+oracle_database_at_aws	Oracle Database at AWS	#C925D1
+oracle_db_instance	Oracle Db Instance	#ffffff
+oracle_db_instance_alternate	Oracle Db Instance Alternate	#ffffff
+organizations	Organizations	#E7157B
+outposts	Outposts rack	#ED7100
+outposts_1u_and_2u_servers	Outposts Servers	#ED7100
+outposts_family	Outposts Family	#ED7100
+panorama	Panorama	#01A88D
+parallel_cluster	Parallel Cluster	#ED7100
+parallel_computing_service	Parallel Computing Service	#ED7100
+parameter_store	Parameter Store	#ffffff
+partner_central	Partner Central	#E7157B
+patch_manager	Patch Manager	#ffffff
+payment_cryptography	Payment Cryptography	#DD344C
+peering	Peering	#ffffff
+permissions	Permissions	#ffffff
+personal_health_dashboard	Health Dashboard	#E7157B
+personalize	Personalize	#01A88D
+pinpoint	Pinpoint	#DD344C
+piop	Piop	#ffffff
+police_emergency	Police Emergency	#ffffff
+policy	Policy	#ffffff
+polly	Polly	#01A88D
+postgresql_instance	Postgresql Instance	#ffffff
+private_5g	Private 5G	#8C4FFF
+private_certificate_authority	Private Certificate Authority	#DD344C
+professional_services	Professional Services	#C925D1
+proton	Proton	#E7157B
+q	Q	#01A88D
+quantum_ledger_database	Quantum Ledger Database	#ED7100
+quantum_technologies	Quantum Technologies	#ED7100
+queue	Queue	#ffffff
+quick_suite	Quick Suite	#DD344C
+quicksight	QuickSight	#8C4FFF
+rds	RDS	#C925D1
+rds_on_vmware	RDS on VMware	#C925D1
+red_hat_openshift	Red Hat OpenShift Service on AWS	#ED7100
+redshift	Redshift	#8C4FFF
+registry	Registry	#ffffff
+rekognition_2	Rekognition	#01A88D
+reported_state	Reported State	#ffffff
+repost	rePost	#C925D1
+repost_private	rePost Private	#C925D1
+rescue	Rescue	#ffffff
+reserved_instance_reporting	Reserved Instance Reporting	#7AA116
+resilience_hub	Resilience Hub	#E7157B
+resource_access_manager	Resource Access Manager	#DD344C
+resource_explorer	Resource Explorer	#E7157B
+resources	Resources	#ffffff
+robomaker	RoboMaker	#DD344C
+robotics	Robotics	#DD344C
+role	Role	#ffffff
+route_53	Route 53	#8C4FFF
+route_table	Route Table	#ffffff
+router	Router	#ffffff
+rtb_fabric	RTB Fabric	#8C4FFF
+rule	Rule	#ffffff
+rule_2	Rule 2	#ffffff
+run_command	Run Command	#ffffff
+s3	Simple Storage Service (S3)	#7AA116
+s3_on_outposts_storage	S3 on Outposts	#7AA116
+sagemaker	SageMaker AI	#01A88D
+sagemaker_2	Sagemaker	#8C4FFF
+sagemaker_ground_truth	SageMaker Ground Truth	#01A88D
+sagemaker_studio_lab	SageMaker Studio Lab	#01A88D
+saml_token	Saml Token	#ffffff
+satellite	Satellite	#C925D1
+savings_plans	Savings Plans	#7AA116
+search_documents	Search Documents	#ffffff
+secrets_manager	Secrets Manager	#DD344C
+security_agent	Security Agent	#DD344C
+security_hub	Security Hub	#DD344C
+security_identity_and_compliance	Security Identity and Compliance	#DD344C
+security_incident_response	Security Incident Response	#DD344C
+security_lake	Security Lake	#DD344C
+sensor	Sensor	#ffffff
+server_migration_service	Server Migration Service	#01A88D
+serverless	Serverless	#8C4FFF
+serverless_application_repository	Serverless Application Repository	#ED7100
+service_catalog	Service Catalog	#E7157B
+service_management_connector	Service Management Connector	#E7157B
+servo	Servo	#ffffff
+shadow	Shadow	#ffffff
+shield	Shield	#DD344C
+signer	Signer	#DD344C
+simple_email_service	Simple Email Service	#DD344C
+simspace_weaver	SimSpace Weaver	#ED7100
+simulator	Simulator	#ffffff
+single_sign_on	Identity Center	#DD344C
+site_to_site_vpn	Site-to-Site VPN	#8C4FFF
+snapshot	Snapshot	#ffffff
+snowball	Snowball	#01A88D
+snowball_edge	Snowball Edge	#01A88D
+snowcone	Snowcone	#7AA116
+snowmobile	Snowmobile	#01A88D
+sns	Simple Notification Service	#E7157B
+spot_instance	Spot Instance	#ffffff
+sql_primary	Sql Primary	#ffffff
+sql_replica	Sql Replica	#ffffff
+sql_workbench	SQL Workbench	#8C4FFF
+sqs	Simple Queue Service	#E7157B
+ssl_padlock	Ssl Padlock	#ffffff
+stack	Stack	#ffffff
+stack2	Stack2	#ffffff
+state_manager	State Manager	#ffffff
+step_functions	Step Functions	#E7157B
+storage	Storage	#7AA116
+storage_gateway	Storage Gateway	#7AA116
+streaming_distribution	Streaming Distribution	#ffffff
+sts	Sts	#ffffff
+sts_alternate	Sts Alternate	#ffffff
+sumerian	Sumerian	#BC1356
+supply_chain	Supply Chain	#DD344C
+support	Support	#C925D1
+systems_manager	Systems Manager	#E7157B
+systems_manager_incident_manager	Systems Manager - Incident Manager	#E7157B
+table	Table	#ffffff
+tape_storage	Tape Storage	#ffffff
+telco_network_builder	Telco Network Builder	#E7157B
+template	Template	#ffffff
+temporary_security_credential	Temporary Security Credential	#ffffff
+tensorflow_on_aws	TensorFlow on AWS	#01A88D
+textract	Textract	#01A88D
+thermostat	Thermostat	#ffffff
+thinkbox_deadline	Thinkbox Deadline	#ED7100
+thinkbox_draft	Thinkbox Draft	#ED7100
+thinkbox_frost	Thinkbox Frost	#ED7100
+thinkbox_krakatoa	Thinkbox Krakatoa	#ED7100
+thinkbox_sequoia	Thinkbox Sequoia	#ED7100
+thinkbox_stoke	Thinkbox Stoke	#ED7100
+thinkbox_xmesh	Thinkbox XMesh	#ED7100
+timestream	Timestream	#C925D1
+tools_and_sdks	Tools and SDKs	#C925D1
+topic	Topic	#ffffff
+topic_2	Topic 2	#ffffff
+torchserve	PyTorch on AWS	#01A88D
+traditional_server	Traditional Server	#ffffff
+training_certification	Training Certification	#C925D1
+transcribe	Transcribe	#01A88D
+transfer_family	Transfer Family	#01A88D
+transfer_for_sftp	Transfer for SFTP	#01A88D
+transform	Transform	#01A88D
+transit_gateway	Transit Gateway	#8C4FFF
+translate	Translate	#01A88D
+travel	Travel	#ffffff
+trusted_advisor	Trusted Advisor	#E7157B
+user	User	#ffffff
+user_notifications	User Notifications	#E7157B
+users	Users	#ffffff
+utility	Utility	#ffffff
+vault	Vault	#ffffff
+verified_access	Verified Access	#8C4FFF
+verified_permissions	Verified Permissions	#DD344C
+virtual_private_cloud	Virtual Private Cloud	#ffffff
+virtual_tape_library	Virtual Tape Library	#ffffff
+vmware_cloud_on_aws	VMware Cloud on AWS	#ED7100
+volume	Volume	#ffffff
+vpc	VPC	#8C4FFF
+vpc_lattice	VPC Lattice	#8C4FFF
+vpc_privatelink	PrivateLink	#8C4FFF
+vpn_connection	Vpn Connection	#ffffff
+vpn_gateway	Vpn Gateway	#ffffff
+waf	WAF	#DD344C
+wavelength	Wavelength	#ED7100
+well_architect_tool	Well-Architected Tool	#E7157B
+wickr	Wickr	#DD344C
+windfarm	Windfarm	#ffffff
+workdocs	WorkDocs	#DD344C
+worklink	WorkLink	#01A88D
+workmail	WorkMail	#DD344C
+workspaces	WorkSpaces	#01A88D
+workspaces_family	WorkSpaces Family	#01A88D
+workspaces_thin_client	WorkSpaces Thin Client	#01A88D
+x1_instance	X1 Instance	#ffffff
+xray	X-Ray	#C925D1

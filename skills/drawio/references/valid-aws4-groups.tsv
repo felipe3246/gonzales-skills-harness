@@ -1,0 +1,23 @@
+# Valid AWS4 grIcon names for shape=mxgraph.aws4.group containers
+# Format: grIcon_name<TAB>title<TAB>official_strokeColor<TAB>official_fillColor
+# Total: 19
+
+group_account	AWS Account	#CD2264	none
+group_auto_scaling_group	Auto Scaling Group	#879196	#ECEFEF
+group_availability_zone	Availability zone	#545B64	none
+group_aws_cloud	AWS Cloud	#AAB7B8	none
+group_aws_cloud_alt	AWS Cloud	#232F3E	none
+group_aws_step_functions_workflow	AWS Step Functions workflow	#545B64	none
+group_corporate_data_center	Corporate data center	#7D8998	none
+group_ec2_instance_contents	EC2 instance contents	#D86613	none
+group_elastic_beanstalk	Elastic Beanstalk container	#D86613	none
+group_elastic_load_balancing	Elastic Load Balancing	#007DBC	none
+group_iot_greengrass	AWS Iot Greengrass	#7AA116	none
+group_iot_greengrass_deployment	AWS Iot Greengrass Deployment	#7AA116	none
+group_on_premise	On-Premise	#AAB7B8	none
+group_region	Region	#879196	none
+group_security_group	Private subnet	#00A4A6	#E6F6F7
+group_spot_fleet	Spot Fleet	#232F3E	none
+group_subnet	Subnet	#879196	none
+group_vpc	VPC	#879196	none
+group_vpc2	VPC	#8C4FFF	none

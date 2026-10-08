@@ -83,6 +83,7 @@ the content isn't.
 | `codebase-design` | ✅ | ✅ | ✅ | `DESIGN-IT-TWICE.md` asks for 3+ parallel sub-agents — confirmed on all three: Claude Code (Task/Agent), Codex (built-in multiagent), Kiro (runs agents in parallel) |
 | `research` | ✅ (spawns a background agent) | ⚠️ plausible, not tested | ✅ (Kiro runs agents in parallel) | Same sub-agent/background capability as above |
 | `diagram-design` | ✅ | ✅ | ✅ | Only needs bash + python3, present on all three |
+| `drawio` | ✅ | ✅ (`argument-hint` is ignored; the body states the format convention) | ✅ | Native `.drawio` output with official AWS icons. PNG/SVG/PDF export and Mermaid conversion need the draw.io Desktop CLI; without it the skill still delivers the `.drawio`. `scripts/validate-drawio.sh` needs `python3` (`xmllint` optional). Trigger overlap with `diagram-design` on "architecture/flowchart": drawio keys on `.drawio`/AWS icons, diagram-design on HTML/SVG |
 | `skill-creator` | ✅ (already ships "Claude.ai-specific" and "Cowork-specific" sections) | ✅ for the core loop; the parallel eval step depends on sub-agents | ✅ | — |
 | `frontend-design` | ✅ | ✅ | ✅ | Plain prose, no tool-specific dependency |
 | `verification-planning` | ✅ | ✅ (frontmatter only has `name`+`description`, no Claude-only field) | ✅ | References `@librarian` — a project-specific agent/skill mention. Only resolves if something named `librarian` exists in the harness running it; otherwise step 4 (research) loses that shortcut and needs another path |

@@ -1,0 +1,599 @@
+# Valid AWS4 dedicated shape names (use as shape=mxgraph.aws4.<name>, NOT resIcon)
+# Format: shape_name<TAB>title<TAB>official_fillColor
+# Total: 595
+
+a1_instance	A1 Instance	#ED7100
+access_analyzer	IAM Access Analyzer	#DD344C
+action	Action	#7AA116
+actuator	Actuator	#7AA116
+ad_connector	AD Connector	#DD344C
+addon	Add-on	#DD344C
+agent	Agent	#DD344C
+agent2	Agent	#01A88D
+alarm	Alarm	#E7157B
+alert	Alert	#232F3D
+alexa_enabled_device	Alexa Voice Service	#7AA116
+alexa_skill	Alexa Skill	#7AA116
+all_products	All Products	#232F3D
+ami	AMI Resource	#ED7100
+amplify_aws_amplify_studio	Amplify Studio	#DD344C
+application	Elastic Beanstalk Application	#ED7100
+application_discovery_service_aws_agentless_collector	Agentless Collector	#01A88D
+application_discovery_service_aws_discovery_agent	Discovery Agent	#01A88D
+application_discovery_service_migration_evaluator_collector	Migration Evaluator Collector	#01A88D
+application_load_balancer	Application Load Balancer	#8C4FFF
+archive	Vault	#7AA116
+athena_data_source_connectors	Athena Data Source Connectors	#8C4FFF
+attribute	Attribute	#C925D1
+attributes	Attributes	#C925D1
+aurora_instance	Aurora Instance	#C925D1
+aurora_instance_alt	Aurora Instance	#C925D1
+authenticated_user	Authenticated User	#232F3D
+auto_scaling2	Auto Scaling	#ED7100
+automation	Automation	#E7157B
+aws_backup_for_aws_cloudformation	Backup for AWS CloudFormation	#7AA116
+aws_backup_legal_hold	Backup Legal Hold	#7AA116
+aws_backup_support_for_amazon_fsx_for_netapp_ontap	Backup Support for Amazon FSX for NetApp ONTAP	#7AA116
+aws_backup_vault_lock	Backup Vault Lock	#7AA116
+aws_glue_data_quality	Glue Data Quality	#8C4FFF
+aws_glue_for_ray	Glue for Ray	#8C4FFF
+backup_audit_manager	Backup Audit Manager	#7AA116
+backup_aws_backup_support_for_amazon_s3	Backup AWS Backup Support for Amazon S3	#7AA116
+backup_aws_backup_support_for_vmware_workloads	Backup AWS Backup Support for VMware Workloads	#7AA116
+backup_compliance_reporting	Backup Compliance Reporting	#7AA116
+backup_compute	Backup Compute	#7AA116
+backup_database	Backup Database	#7AA116
+backup_gateway	Backup Gateway	#7AA116
+backup_plan	Backup Plan	#7AA116
+backup_recovery_point_objective	Backup Recovery Point Objective	#7AA116
+backup_recovery_time_objective	Backup Recovery Time Objective	#7AA116
+backup_restore	Backup Restore	#7AA116
+backup_storage	Backup Storage	#7AA116
+backup_vault	Backup Vault	#7AA116
+backup_virtual_machine	Backup Virtual Machine	#7AA116
+backup_virtual_machine_monitor	Backup Virtual Machine Monitor	#7AA116
+bank	Bank	#7AA116
+blockchain_resource	Blockchain	#ED7100
+braket_chandelier	Braket Chandelier	#ED7100
+braket_chip	Braket Chip	#ED7100
+braket_embedded_simulator	Braket Embedded Simulator	#ED7100
+braket_managed_simulator	Braket Managed Simulator	#ED7100
+braket_noise_simulator	Braket Noise Simulator	#ED7100
+braket_qpu	Braket QPU	#ED7100
+braket_simulator	Braket Simulator	#ED7100
+braket_simulator_1	Braket Simulator	#ED7100
+braket_simulator_2	Braket Simulator	#ED7100
+braket_simulator_3	Braket Simulator	#ED7100
+braket_simulator_4	Braket Simulator	#ED7100
+braket_state_vector	Braket State Vector	#ED7100
+braket_tensor_network	Braket Tensor Network	#ED7100
+bucket	Bucket	#7AA116
+bucket_with_objects	Bucket with Objects	#7AA116
+bycicle	Bycicle	#7AA116
+c4_instance	C4 Instance	#ED7100
+c5_instance	C5 Instance	#ED7100
+c5a	C5a Instance	#ED7100
+c5ad	C5ad Instance	#ED7100
+c5d	C5d Instance	#ED7100
+c5n_instance	C5n Instance	#ED7100
+c6g_instance	C6g Instance	#ED7100
+c6gd	C6gd Instance	#ED7100
+cache_node	Cache Node	#C925D1
+cached_volume	Cached Volume	#7AA116
+camera	Camera	#7AA116
+camera2	Camera	#232F3D
+car	Car	#7AA116
+cart	Cart	#7AA116
+certificate_manager	Certificate	#7AA116
+certificate_manager_2	Certificate Authority	#DD344C
+change_set	Change Set	#E7157B
+chat	Chat	#232F3D
+checklist	Checklist	#E7157B
+checklist_cost	Checklist Cost	#E7157B
+checklist_fault_tolerant	Checklist Fault Tolerant	#E7157B
+checklist_performance	Checklist Performance	#E7157B
+checklist_security	Checklist Security	#E7157B
+classic_load_balancer	Classic Load Balancer	#8C4FFF
+client	Client	#232F3D
+cloud9	Cloud9	#C925D1
+cloud_digital_interface	Cloud Digital Interface	#ED7100
+cloud_extension_ros	Cloud Extensions ROS	#DD344C
+cloud_wan_segment_network	Cloud WAN Segment Network	#8C4FFF
+cloud_wan_transit_gateway_route_table_attachment	Cloud WAN Transit Gateway Route Table Attachment	#8C4FFF
+cloud_wan_virtual_pop	Cloud WAN Core Network Edge	#8C4FFF
+cloudfront_functions	CloudFront Functions	#8C4FFF
+cloudtrail_cloudtrail_lake	CloudTrail Lake	#E7157B
+cloudwatch_cross_account_observability	CloudWatch Cross Account Observability	#E7157B
+cloudwatch_data_protection	CloudWatch Data Protection	#E7157B
+cloudwatch_evidently	CloudWatch Evidently	#E7157B
+cloudwatch_logs	CloudWatch Logs	#E7157B
+cloudwatch_metrics_insights	CloudWatch Metrics Insights	#E7157B
+cloudwatch_rum	CloudWatch RUM	#E7157B
+cloudwatch_synthetics	CloudWatch Synthetics	#E7157B
+cluster	HDFS Cluster	#8C4FFF
+coffee_pot	Coffee Pot	#7AA116
+cold_storage	Cold Storage	#232F3D
+connector	Connector	#7AA116
+container_1	Container	#ED7100
+container_2	Container	#ED7100
+container_3	Container	#ED7100
+container_registry_image	Image	#ED7100
+corporate_data_center	Corporate Data Center	#232F3D
+credentials	Credentials	#232F3D
+customer_gateway	VPC Customer Gateway	#8C4FFF
+d2_instance	D2 Instance	#ED7100
+d3_instance	D3 Instance	#ED7100
+d3en_instance	D3en Instance	#ED7100
+data_encryption_key	Data Encryption Key	#DD344C
+data_exchange_for_apis	Data Exchange for APIs	#8C4FFF
+data_lake_resource_icon	Data Lake	#8C4FFF
+data_set	Data Set	#7AA116
+data_stream	Data Stream	#232F3D
+data_table	Data Table	#232F3D
+database_migration_workflow_job	Database Migration Workflow / Job	#C925D1
+datasync_discovery	Datasync Discovery	#01A88D
+datazone_business_data_catalog	DataZone Business Data Catalog	#8C4FFF
+datazone_data_portal	DataZone Data Portal	#8C4FFF
+datazone_data_projects	DataZone Data Projects	#8C4FFF
+db_on_instance2	DB Instance	#ED7100
+dense_compute_node	Dense Compute Node	#8C4FFF
+dense_storage_node	Dense Storage Node	#8C4FFF
+deployment	Deployment	#ED7100
+deployments	Deployments	#E7157B
+desired_state	Desired State	#7AA116
+development_environment	Development Environment	#DD344C
+devops_guru_insights	DevOps Guru Insights	#01A88D
+disk	Disk	#232F3D
+document	Document	#232F3D
+documentdb_elastic_clusters	DocumentDB Elastic Clusters	#C925D1
+documents	Documents	#232F3D
+documents2	Documents	#232F3D
+documents3	Documents	#232F3D
+door_lock	Door Lock	#7AA116
+download_distribution	Download Distribution	#8C4FFF
+dynamodb_dax	DynamoDB Accelerator	#C925D1
+dynamodb_standard_access_table_class	DynamoDB Standard Access Table Class	#C925D1
+dynamodb_standard_infrequent_access_table_class	DynamoDB Standard Infrequent Access Table Class	#C925D1
+dynamodb_stream	DynamoDB Stream	#C925D1
+ec2_aws_microservice_extractor_for_net	EC2 AWS Microservice Extractor for .NET	#ED7100
+ec2_c6a_instance	C6a Instance	#ED7100
+ec2_c6gn_instance	C6gn Instance	#ED7100
+ec2_c6i_instance	C6i Instance	#ED7100
+ec2_c6in_instance	C6in Instance	#ED7100
+ec2_c7g_instance	C7g Instance	#ED7100
+ec2_c7gn_instance	C7gn Instance	#ED7100
+ec2_dl1_instance	DL1 Instance	#ED7100
+ec2_g5_instance	G5 Instance	#ED7100
+ec2_g5g_instance	G5g Instance	#ED7100
+ec2_hpc6a_instance	Hpc6a Instance	#ED7100
+ec2_hpc6id_instance	Hpc6id Instance	#ED7100
+ec2_i4i_instance	I4i Instance	#ED7100
+ec2_im4gn_instance	Im4gn Instance	#ED7100
+ec2_inf2_instance	Inf2	#ED7100
+ec2_is4gen_instance	Is4gen Instance	#ED7100
+ec2_m1_mac_instance	EC2 M1 Mac Instance	#ED7100
+ec2_m6a_instance	M6a Instance	#ED7100
+ec2_m6i_instance	M6i Instance	#ED7100
+ec2_m6idn_instance	M6idn Instance	#ED7100
+ec2_m6in_instance	M6in Instance	#ED7100
+ec2_p4de_instance	P4de Instance	#ED7100
+ec2_r6a_instance	R6a Instance	#ED7100
+ec2_r6i_instance	R6i Instance	#ED7100
+ec2_r6idn_instance	R6idn Instance	#ED7100
+ec2_r6in_instance	R6in Instance	#ED7100
+ec2_r7iz_instance	R7iz Instance	#ED7100
+ec2_trn1_instance	Trn1 Instance	#ED7100
+ec2_vt1_instance	Vt1 Instance	#ED7100
+ec2_x2gd_instance	X2gd Instance	#ED7100
+ec2_x2idn_instance	X2idn Instance	#ED7100
+ec2_x2iedn_instance	X2iedn Instance	#ED7100
+ec2_x2iezn_instance	X2iezn Instance	#ED7100
+echo	Echo	#7AA116
+ecs_anywhere	ECS Anywhere	#ED7100
+ecs_copilot_cli	ECS copilot CLI	#ED7100
+ecs_service	Service	#ED7100
+ecs_service_connect	ECS Service Connect	#ED7100
+ecs_task	Task	#ED7100
+edge_location	Edge Location	#8C4FFF
+eks_on_outposts	EKS On Outposts	#ED7100
+elastic_block_store_amazon_data_lifecycle_manager	Elastic Block Store Amazon Data Lifecycle Manager	#7AA116
+elastic_block_store_volume_gp3	Elastic Block Store Volume gp3	#7AA116
+elastic_file_system_elastic_throughput	Elastic File System Elastic Throughput	#7AA116
+elastic_file_system_infrequent_access	Elastic File System Standard Infrequent Access	#7AA116
+elastic_file_system_intelligent_tiering	Elastic File System Intelligent Tiering	#7AA116
+elastic_file_system_one_zone	Elastic File System One Zone	#7AA116
+elastic_file_system_one_zone_infrequent_access	Elastic File System One Zone Infrequent Access	#7AA116
+elastic_file_system_standard	Elastic File System Standard	#7AA116
+elastic_ip_address	Elastic IP Address	#ED7100
+elastic_network_adapter	Elastic Network Adapter	#8C4FFF
+elastic_network_interface	Elastic Network Interface	#8C4FFF
+elasticache_for_memcached	ElastiCache for Memcached	#C925D1
+elasticache_for_redis	ElastiCache for Redis	#C925D1
+elasticache_for_valkey	ElastiCache for Valkey	#C925D1
+email	Email	#DD344C
+email_2	Email	#232F3D
+email_notification	Email Notification	#E7157B
+emr_engine	EMR Engine	#8C4FFF
+emr_engine_mapr_m3	EMR Engine MapR M3	#8C4FFF
+emr_engine_mapr_m5	EMR Engine MapR M5	#8C4FFF
+emr_engine_mapr_m7	EMR Engine MapR M7	#8C4FFF
+encrypted_data	Encrypted Data	#DD344C
+endpoint	API Gateway Endpoint	#E7157B
+endpoints	Endpoints	#8C4FFF
+event	Event	#E7157B
+event_event_based	Event (Event-Based)	#E7157B
+event_resource	Event Resource	#E7157B
+event_time_based	Event (Time-Based)	#E7157B
+eventbridge_custom_event_bus_resource	Custom Event Bus	#E7157B
+eventbridge_default_event_bus_resource	Default Event Bus	#E7157B
+eventbridge_pipes	EventBridge Pipes	#E7157B
+eventbridge_saas_partner_event_bus_resource	SaaS Partner Event	#E7157B
+eventbridge_scheduler	EventBridge Scheduler	#E7157B
+eventbridge_schema	EventBridge Schema	#E7157B
+eventbridge_schema_registry	EventBridge Schema Registry	#E7157B
+external_sdk	SDK	#232F3D
+external_toolkit	Toolkit	#232F3D
+f1_instance	F1 Instance	#ED7100
+factory	Factory	#7AA116
+file_cache_hybrid_nfs_linked_datasets	File Cache Hybrid NFS Linked Datasets	#7AA116
+file_cache_on_premises_nfs_linked_datasets	File Cache On Premises NFS Linked Datasets	#7AA116
+file_cache_s3_linked_datasets	File Cache S3 Linked Datasets	#7AA116
+file_gateway	File Gateway	#7AA116
+file_system	File System	#7AA116
+filtering_rule	Filtering Rule	#DD344C
+finding	Finding	#DD344C
+firetv	Fire TV	#7AA116
+firetv_stick	Fire TV Stick	#7AA116
+fleet_management	Fleet Management	#DD344C
+flow_logs	Flow Logs	#8C4FFF
+folder	Folder	#232F3D
+folders	Folders	#232F3D
+forums	Forums	#232F3D
+fsx_file_gateway	FSx File Gateway	#7AA116
+g3_instance	G3 Instance	#ED7100
+g4ad_instance	G4ad Instance	#ED7100
+g4dn	G4dn Instance	#ED7100
+gateway	Gateway	#8C4FFF
+gateway_load_balancer	Gateway Load Balancer	#8C4FFF
+gear	Gear	#232F3D
+general_access_points	Access Points	#7AA116
+generic	Generic	#7AA116
+generic_application	Generic Application	#232F3D
+generic_database	Generic Database	#232F3D
+generic_firewall	Generic Firewall	#232F3D
+git_repository	Git Repository	#232F3D
+glacier	Glacier Flexible Retrieval	#7AA116
+glacier_deep_archive	Glacier Deep Archive	#7AA116
+global_secondary_index	Global Secondary Index	#C925D1
+globe	Globe	#232F3D
+glue_crawlers	Crawler	#8C4FFF
+glue_data_catalog	Glue Data Catalog	#8C4FFF
+glue_databrew	Glue DataBrew	#8C4FFF
+h1_instance	H1 Instance	#ED7100
+habana_gaudi	Habana Gaudi Instance	#ED7100
+hardware_board	Hardware Board	#7AA116
+hdfs_cluster	HDFS Cluster	#8C4FFF
+high_memory_instance	High Memory Instance	#ED7100
+hosted_zone	Hosted Zone	#8C4FFF
+house	House	#7AA116
+http2_protocol	HTTP2 protocol	#7AA116
+http_notification	HTTP Notification	#E7157B
+http_protocol	HTTP protocol	#7AA116
+i2	I2 Instance	#ED7100
+i3_instance	I3 Instance	#ED7100
+i3en	I3en Instance	#ED7100
+identity_access_management_iam_roles_anywhere	IAM Roles Anywhere	#DD344C
+illustration_desktop	Illustration Desktop	#879196
+illustration_devices	Illustration Devices	#879196
+illustration_notification	Illustration Notification	#879196
+illustration_office_building	Illustration Office Building	#879196
+illustration_users	Illustration Users	#879196
+import_export	Snowball Import Export	#7AA116
+inf1	Inf1	#ED7100
+inferentia	Inferentia	#ED7100
+instance2	Instance	#ED7100
+instance_with_cloudwatch2	Instance with CloudWatch	#ED7100
+instances	Instances	#ED7100
+instances_2	Instances	#E7157B
+intelligent_tiering	Intelligent Tiering	#7AA116
+internet	Internet	#232F3D
+internet_alt1	Internet	#232F3D
+internet_alt2	Internet	#232F3D
+internet_alt22	Internet	#232F3D
+internet_gateway	Internet Gateway	#8C4FFF
+inventory	Inventory	#E7157B
+iot_analytics_channel	Channel	#7AA116
+iot_analytics_data_store	Data Store	#7AA116
+iot_analytics_pipeline	Pipeline	#7AA116
+iot_core_device_advisor	IoT Core Device Advisor	#7AA116
+iot_core_device_location	IoT Core Device Location	#7AA116
+iot_device_gateway	Device Gateway	#7AA116
+iot_device_jobs_resource	Device Jobs	#7AA116
+iot_device_management_fleet	Device Management Fleet	#7AA116
+iot_device_tester	Device Tester	#7AA116
+iot_greengrass_artifact	Greengrass Artifact	#7AA116
+iot_greengrass_component	Greengrass Component	#7AA116
+iot_greengrass_component_machine_learning	Greengrass Component Machine Learning	#7AA116
+iot_greengrass_component_nucleus	Greengrass Component Nucleus	#7AA116
+iot_greengrass_component_private	Greengrass Component Private	#7AA116
+iot_greengrass_component_public	Greengrass Component Public	#7AA116
+iot_greengrass_interprocess_communication	Greengrass Interprocess Communication	#7AA116
+iot_greengrass_protocol	Greengrass Protocol	#7AA116
+iot_greengrass_recipe	Greengrass Recipe	#7AA116
+iot_greengrass_stream_manager	Greengrass Stream Manager	#7AA116
+iot_lorawan_protocol	LoRaWAN Protocol	#7AA116
+iot_over_the_air_update	Over-The-Air Update	#7AA116
+iot_sailboat	Sailboat	#7AA116
+iot_sitewise_asset	SiteWise Asset	#7AA116
+iot_sitewise_asset_hierarchy	SiteWise Asset Hierarchy	#7AA116
+iot_sitewise_asset_model	SiteWise Asset Model	#7AA116
+iot_sitewise_asset_properties	SiteWise Asset Properties	#7AA116
+iot_sitewise_data_streams	SiteWise Data Streams	#7AA116
+iot_thing_freertos_device	FreeRTOS Device	#7AA116
+iot_thing_humidity_sensor	Humidity Sensor	#7AA116
+iot_thing_industrial_pc	Industrial PC	#7AA116
+iot_thing_plc	PLC	#7AA116
+iot_thing_relay	Relay	#7AA116
+iot_thing_stacklight	Stacklight	#7AA116
+iot_thing_temperature_humidity_sensor	Temperature Humidity Sensor	#7AA116
+iot_thing_temperature_sensor	Temperature Sensor	#7AA116
+iot_thing_temperature_vibration_sensor	Temperature Vibration Sensor	#7AA116
+iot_thing_vibration_sensor	Vibration Sensor	#7AA116
+item	Item	#C925D1
+items	Items	#C925D1
+json_script	JSON Script	#232F3D
+key_management_service_external_key_store	Key Management Service External Key Store	#DD344C
+lambda_function	Lambda Function	#ED7100
+layers	Layers	#E7157B
+license_manager_application_discovery	License Manager Application Discovery	#E7157B
+license_manager_license_blending	License Manager License Blending	#E7157B
+lightbulb	Lightbulb	#7AA116
+location_service_geofence	Location Service Geofence	#DD344C
+location_service_map	Location Service Map	#DD344C
+location_service_place	Location Service Place	#DD344C
+location_service_routes	Location Service Routes	#DD344C
+location_service_track	Location Service Track	#DD344C
+logs	Logs	#232F3D
+long_term_security_credential	Long Term Security Credential	#DD344C
+m4_instance	M4 Instance	#ED7100
+m5_instance	M5 Instance	#ED7100
+m5a_instance	M5a Instance	#ED7100
+m5d_instance	M5d Instance	#ED7100
+m5dn_instance	M5dn Instance	#ED7100
+m5n_instance	M5n Instance	#ED7100
+m5zn_instance	M5zn Instance	#ED7100
+m6g_instance	M6g Instance	#ED7100
+m6gd_instance	M6gd Instance	#ED7100
+mac_instance	Mac Instance	#ED7100
+magnifying_glass_2	Magnifying Glass	#232F3D
+mainframe_modernization_analyzer	Mainframe Modernization Analyzer	#01A88D
+mainframe_modernization_compiler	Mainframe Modernization Compiler	#01A88D
+mainframe_modernization_converter	Mainframe Modernization Converter	#01A88D
+mainframe_modernization_developer	Mainframe Modernization Developer	#01A88D
+mainframe_modernization_runtime	Mainframe Modernization Runtime	#01A88D
+maintenance_windows	Maintenance Windows	#E7157B
+managed_ms_ad	Managed MS AD	#DD344C
+management_console2	Management Console	#232F3D
+marketplace	Marketplace	#232F3D
+mediaconnect_gateway	MediaConnect Gateway	#ED7100
+medical_emergency	Medical Emergency	#7AA116
+mesh	Mesh	#8C4FFF
+message	Message	#E7157B
+metrics	Metrics	#232F3D
+mfa_token	MFA Token	#DD344C
+migration_hub_refactor_spaces_applications	Migration Hub Refactor Spaces Applications	#01A88D
+migration_hub_refactor_spaces_environments	Migration Hub Refactor Spaces Environments	#01A88D
+migration_hub_refactor_spaces_services	Migration Hub Refactor Spaces Services	#01A88D
+mobile_client	Mobile Client	#232F3D
+monitoring	Monitoring	#E7157B
+mq_broker	MQ Broker	#E7157B
+mqtt_protocol	MQTT Protocol	#7AA116
+msk_amazon_msk_connect	MSK Connect	#8C4FFF
+multimedia	Multimedia	#232F3D
+multiple_volumes_resource	Multiple Volumes	#7AA116
+namespace	Namespace	#8C4FFF
+nat_gateway	NAT Gateway	#8C4FFF
+network_access_control_list	Network Access Control List	#8C4FFF
+network_firewall_endpoints	Network Firewall Endpoints	#DD344C
+network_load_balancer	Network Load Balancer	#8C4FFF
+non_cached_volume	Non-Cached Volume	#7AA116
+notebook	Notebook	#7AA116
+object	Object	#7AA116
+office_building	Office Building	#232F3D
+one_zone_ia	One Zone IA	#7AA116
+opensearch_dashboards	OpenSearch Service Dashboards	#8C4FFF
+opensearch_ingestion	OpenSearch Service Ingestion	#8C4FFF
+opensearch_observability	OpenSearch Service Observability	#8C4FFF
+opensearch_service_cluster_administrator_node	OpenSearch Service Cluster Administrator Node	#8C4FFF
+opensearch_service_data_node	OpenSearch Service Data Node	#8C4FFF
+opensearch_service_index	OpenSearch Service Index	#8C4FFF
+opensearch_service_traces	OpenSearch Service Traces	#8C4FFF
+opensearch_service_ultrawarm_node	OpenSearch Service UltraWarm Node	#8C4FFF
+opsworks_apps	Apps	#E7157B
+opsworks_permissions	Permissions	#E7157B
+optimized_instance	Optimized Instance	#ED7100
+organizations_account	Account	#E7157B
+organizations_account2	Organizations Account	#E7157B
+organizations_management_account	Organizations Management Account	#E7157B
+organizations_management_account2	Organizations Management Account	#E7157B
+organizations_organizational_unit	Organizations Organizational Unit	#DD344C
+organizations_organizational_unit2	Organizational Unit	#E7157B
+p2_instance	P2 Instance	#ED7100
+p3_instance	P3 Instance	#ED7100
+p3dn_instance	P3dn Instance	#ED7100
+p4_instance	P4 Instance	#ED7100
+p4d_instance	P4d Instance	#ED7100
+parameter_store	Parameter Store	#E7157B
+patch_manager	Patch Manager	#E7157B
+peering	Peering Connection	#8C4FFF
+permissions	Permissions	#DD344C
+pinpoint_journey	Pinpoint Journey	#DD344C
+police_emergency	Police Emergency	#7AA116
+policy	Policy	#7AA116
+programming_language	Programming Language	#232F3D
+question	Question	#232F3D
+queue	Queue	#E7157B
+quicksight_paginated_reports	Quicksight Paginated Reports	#8C4FFF
+r4_instance	R4 Instance	#ED7100
+r5_instance	R5 Instance	#ED7100
+r5a_instance	R5a Instance	#ED7100
+r5ad_instance	R5ad Instance	#ED7100
+r5b_instance	R5b Instance	#ED7100
+r5d_instance	R5d Instance	#ED7100
+r5gd_instance	R5gd Instance	#ED7100
+r5n_instance	R5n Instance	#ED7100
+r6g_instance	R6g Instance	#ED7100
+rdn_instance	Rdn Instance	#ED7100
+rds_blue_green_deployments	RDS Blue Green Deployments	#C925D1
+rds_instance	RDS Instance	#C925D1
+rds_instance_alt	RDS Instance	#C925D1
+rds_mariadb_instance	MariaDB Instance	#C925D1
+rds_mariadb_instance_alt	MariaDB Instance	#C925D1
+rds_multi_az	RDS Multi-AZ	#C925D1
+rds_multi_az_db_cluster	RDS Multi-AZ DB Cluster	#C925D1
+rds_mysql_instance	MySQL Instance	#C925D1
+rds_mysql_instance_alt	MySQL Instance	#C925D1
+rds_optimized_writes	RDS Optimized Writes	#C925D1
+rds_oracle_instance	Oracle Instance	#C925D1
+rds_oracle_instance_alt	Oracle Instance	#C925D1
+rds_piops	PIOPS Instance	#C925D1
+rds_postgresql_instance	Postgre SQL Instance	#C925D1
+rds_postgresql_instance_alt	Postgre SQL Instance	#C925D1
+rds_proxy	RDS Proxy Instance	#C925D1
+rds_proxy_alt	RDS Proxy Instance	#C925D1
+rds_sql_server_instance	SQL Server Instance	#C925D1
+rds_sql_server_instance_alt	SQL Server Instance	#C925D1
+rds_trusted_language_extensions_for_postgresql	Trusted Language Extensions for PostgreSQL	#C925D1
+recover	Recover	#232F3D
+redshift_auto_copy	Redshift Auto Copy	#8C4FFF
+redshift_data_sharing_governance	Redshift Data Sharing Governance	#8C4FFF
+redshift_ml	Redshift ML	#8C4FFF
+redshift_query_editor_v20_light	Redshift Query Editor v2.0	#8C4FFF
+redshift_ra3	Redshift RA3	#8C4FFF
+redshift_streaming_ingestion	Redshift Streaming Ingestion	#8C4FFF
+registry	Registry	#ED7100
+rekognition_image	Rekognition image	#01A88D
+rekognition_video	Rekognition video	#01A88D
+replication	Replication	#7AA116
+replication_time_control	Replication Time Control	#7AA116
+reported_state	Reported State	#7AA116
+rescue	Rescue	#ED7100
+resource	Resource	#8C4FFF
+resources	Resources	#E7157B
+role	Role	#DD344C
+route_53_application_recovery_controller	Route 53 Application Recovery Controller	#8C4FFF
+route_53_readiness_checks	Route 53 Readiness Checks	#8C4FFF
+route_53_resolver	Route 53 Resolver	#8C4FFF
+route_53_resolver_dns_firewall	Route 53 Resolver DNS Firewall	#8C4FFF
+route_53_resolver_query_logging	Route 53 Resolver Query Logging	#8C4FFF
+route_53_routing_controls	Route 53 Routing Controls	#8C4FFF
+route_table	Route Table	#8C4FFF
+router	Router	#8C4FFF
+rule	Rule	#7AA116
+rule_2	Rule	#E7157B
+rule_3	Rule	#E7157B
+run_command	Run Command	#E7157B
+s3_batch_operations	S3 Batch Operations	#7AA116
+s3_express_one_zone	S3 Express One-Zone	#7AA116
+s3_file_gateway	S3 File Gateway	#7AA116
+s3_multi_region_access_points	S3 Multi-Region Access Points	#7AA116
+s3_object_lambda	S3 Object Lambda	#7AA116
+s3_object_lambda_access_points	S3 Object Lambda Access Points	#7AA116
+s3_object_lock	S3 Object Lock	#7AA116
+s3_on_outposts	S3 On Outposts	#7AA116
+s3_select	S3 Select	#7AA116
+s3_storage_lens	S3 Storage Lens	#7AA116
+s3_tables	S3 Tables	#7AA116
+s3_vectors	S3 Vectors	#7AA116
+sagemaker_canvas	SageMaker Canvas	#01A88D
+sagemaker_geospatial_ml	SageMaker Geospatial ML	#01A88D
+sagemaker_model	Model	#01A88D
+sagemaker_notebook	Notebook	#01A88D
+sagemaker_shadow_testing	Shadow Testing	#01A88D
+sagemaker_train	Train	#01A88D
+saml_token	SAML Token	#232F3D
+search_documents	CloudSearch Search Documents	#8C4FFF
+sensor	Sensor	#7AA116
+servers	Servers	#232F3D
+service	Service	#8C4FFF
+servo	Servo	#7AA116
+shadow	Shadow	#7AA116
+shield2	Shield	#232F3D
+shield_shield_advanced	Shield Advanced	#E7157B
+simple_ad	Simple AD	#DD344C
+simple_storage_service_directory_bucket	S3 Directory Bucket	#7AA116
+simple_storage_service_s3_glacier_instant_retrieval	Glacier Instant Retrieval	#7AA116
+simulation	Simulation	#DD344C
+simulator	Simulator	#7AA116
+snapshot	Snapshot	#7AA116
+source_code	Source Code	#232F3D
+spot_instance	Spot Instance	#ED7100
+ssl_padlock	SSL Padlock	#232F3D
+stack	Stack	#E7157B
+stack2	Stack	#E7157B
+standard_ia	Standard IA	#7AA116
+state_manager	State Manager	#E7157B
+streaming_distribution	Streaming Distribution	#8C4FFF
+sts	STS	#DD344C
+sts_alternate	STS	#DD344C
+systems_manager_application_manager	Application Manager	#E7157B
+systems_manager_change_calendar	Change Calendar	#E7157B
+systems_manager_change_manager	Change Manager	#E7157B
+systems_manager_compliance	Compliance	#E7157B
+systems_manager_distributor	Distributor	#E7157B
+systems_manager_incident_manager	Incident Manager	#E7157B
+systems_manager_opscenter	OpsCenter	#E7157B
+systems_manager_session_manager	Session Manager	#E7157B
+t2_instance	T2 Instance	#ED7100
+t3_instance	T3 Instance	#ED7100
+t3a_instance	T3a Instance	#ED7100
+t4g_instance	T4g Instance	#ED7100
+table	Table	#C925D1
+tape_gateway	Tape Gateway	#7AA116
+tape_storage	Tape Storage	#232F3D
+template	Template	#E7157B
+temporary_security_credential	Temporary Security Credential	#DD344C
+textract_analyze_lending	Textract Analyze Lending	#01A88D
+thermostat	Thermostat	#7AA116
+topic	Topic	#E7157B
+topic_2	Topic	#7AA116
+traditional_server	Traditional Server	#232F3D
+trainium_instance	Trainium Instance	#ED7100
+transfer_family_aws_as2	AS2	#01A88D
+transfer_for_ftp_resource	FTP	#01A88D
+transfer_for_ftps_resource	FTPS	#01A88D
+transfer_for_sftp_resource	SFTP	#01A88D
+transit_gateway_attachment	Transit Gateway Attachment	#8C4FFF
+travel	Travel	#7AA116
+user	User	#232F3D
+users	Users	#232F3D
+utility	Utility	#7AA116
+vault	Archive	#7AA116
+virtual_gateway	Virtual Gateway	#8C4FFF
+virtual_node	Virtual Node	#8C4FFF
+virtual_router	Virtual Router	#8C4FFF
+virtual_service	Virtual Service	#8C4FFF
+virtual_tape_library	Virtual Tape Library	#7AA116
+volume	Volume	#7AA116
+volume_gateway	Volume Gateway	#7AA116
+vpc_access_points	VPC Access Points	#7AA116
+vpc_carrier_gateway	VPC Carrier Gateway	#8C4FFF
+vpc_network_access_analyzer	VPC Network Access Analyzer	#8C4FFF
+vpc_reachability_analyzer	VPC Reachability Analyzer	#8C4FFF
+vpc_traffic_mirroring	Traffic Mirroring	#8C4FFF
+vpc_virtual_private_cloud_vpc	VPC	#8C4FFF
+vpn_connection	VPN Connection	#8C4FFF
+vpn_gateway	VPN Gateway	#8C4FFF
+waf_bad_bot	WAF Bad Bot	#DD344C
+waf_bot	WAF Bot	#DD344C
+waf_bot_control	WAF Bot Control	#DD344C
+waf_labels	WAF Labels	#DD344C
+waf_managed_rule	WAF Managed Rule	#DD344C
+waf_rule	WAF Rule	#DD344C
+windfarm	Windfarm	#7AA116
+workspaces_family_amazon_workspaces	WorkSpaces Family Amazon Workspaces	#01A88D
+workspaces_family_amazon_workspaces_core	WorkSpaces Family Amazon Workspaces Core	#01A88D
+workspaces_workspaces_web	WorkSpaces Secure Browser	#01A88D
+x1_instance2	X1 Instance	#ED7100
+x1e_instance	X1e Instance	#ED7100
+z1d_instance	z1d Instance	#ED7100
