@@ -10,12 +10,16 @@ cross-wired to work the way I work, across whichever of **Claude Code**,
 
 - `skills/` — the canonical copy of every skill, one directory per skill,
   each with a `SKILL.md`. This is the only place you edit.
+- `guidelines/AGENTS.md` — always-on coding guidelines (Karpathy's four
+  principles plus my additions), installed into each tool's global
+  instruction file. Same rule: edit only here. See "Guidelines" below.
 - `.claude/skills/`, `.agents/skills/`, `.kiro/skills/` — symlink farms so
   Claude Code, Codex, and Kiro each see the same skills without three copies
   of the content.
-- `setup.sh` — installs the skills (and, optionally, the curated plugins)
-  into your actual tool config, not just inside this repo. Skills land there
-  as real copies, not symlinks.
+- `setup.sh` — installs the skills and the guidelines (and, optionally, the
+  curated plugins) into your actual tool config, not just inside this repo.
+  Skills land there as real copies, not symlinks; the guidelines as a
+  marker-delimited block.
 
 ## Quick start
 
@@ -32,8 +36,9 @@ cd gonzales-skills-harness
 Skills are installed as **user-scope copies** (`~/.claude/skills`,
 `~/.agents/skills` for Codex, `~/.kiro/skills`), so they work in every project
 afterward, not just inside this repo, and keep working even if you move or
-delete this clone. Because they are copies, **edits in `skills/` only reach
-the global install when you re-run `./setup.sh`**. Plugins are installed with
+delete this clone. The guidelines go in next to them (see "Guidelines"
+below). Because they are copies, **edits in `skills/` or `guidelines/` only
+reach the global install when you re-run `./setup.sh`**. Plugins are installed with
 `claude plugin install ... --scope user -y` and `codex plugin add ...` — the
 same commands listed in the tables below, just automated. Kiro has no plugin
 system, so it never enters that part.
@@ -48,8 +53,15 @@ tells its own installs apart from anything else at the destination:
   instead of copy) are replaced by copies;
 - anything else found at the destination is moved aside as `.bak-<timestamp>`
   instead of being overwritten;
+- the guidelines block is replaced in place between its two markers; whatever
+  else lives in the same file (your own notes, a block another plugin wrote)
+  is left untouched;
 - marketplace registrations and plugin installs are never duplicated (both
   commands are idempotent).
+
+`--dry-run` runs those same checks against your real destinations and prints
+the decision per skill (unchanged, update, convert old link, back up and
+install, install) and per guidelines file, without writing anything.
 
 ## How it works
 
@@ -86,6 +98,49 @@ Its body is written for OpenCode specifically (mentions `oh-my-opencode-slim`,
 OpenCode logs), so surfacing it in Claude Code, Codex, or Kiro would instruct
 the agent about a tool it isn't running. The frontmatter format is compatible;
 the content isn't.
+
+## Guidelines
+
+Skills load on demand. `guidelines/AGENTS.md` is the opposite kind of
+content: short behavioral rules that should be in context in **every**
+session, whichever tool is running. It is Andrej Karpathy's four principles
+(think before coding, simplicity first, surgical changes, goal-driven
+execution), each with a condensed example from the upstream `EXAMPLES.md`,
+plus three additions of mine: a rule that a project's own instructions win
+over these guidelines when they contradict (Claude Code and Codex have no
+formal precedence between user-level and project files; only Kiro does), a
+rule for unattended runs, where the agent cannot stop to ask, and a fifth
+principle about deleting temporary work (scratch files, downloaded archives,
+throwaway clones, worktrees) before reporting done, and passing that
+instruction on to any sub-agent it spawns.
+
+Each tool has one global file it always reads; `setup.sh` writes the
+guidelines there as a block between `<!-- project-guidelines:start -->` and
+`<!-- project-guidelines:end -->`, with the source path on the first line
+inside the block:
+
+| Tool | Destination | Why there |
+|---|---|---|
+| Claude Code | `~/.claude/rules/project-guidelines.md` | User-level rules apply to every project and load before project rules. A file of our own, so a `~/.claude/CLAUDE.md` you write by hand is never touched |
+| Codex | `~/.codex/AGENTS.md` | Codex's global instruction file, loaded before the project's own `AGENTS.md` (verified in `codex-rs/codex-home/src/instructions/mod.rs`). The block coexists with whatever is already there (the context7 plugin writes its own `<!-- context7 -->` block into this file). Caveat: Codex checks `~/.codex/AGENTS.override.md` first and, if that exists and is non-empty, ignores `AGENTS.md` entirely, so don't create one, or move the block there |
+| Kiro | `~/.kiro/steering/project-guidelines.md` | Global steering; files without frontmatter are "always included", which is what we want |
+
+Behavior on each run: file missing, create it with the block; markers
+present, replace only what sits between them; file present without markers,
+warn that the file exists and that the block will be appended, then append
+it at the end after a blank line; content identical, report "sem mudanças"
+and change nothing. `--dry-run` runs the same checks and prints either
+"sem mudanças" or which of the three actions it would take, including that
+warning, and writes nothing.
+
+The file is deliberately small (~130 lines, ~5 KB): it costs tokens in every
+session, and Codex caps the combined size of its instruction files at 32 KiB
+by default. The full upstream `EXAMPLES.md` is ~500 lines and is not
+installed; the one-paragraph examples in the guidelines are condensed from
+it.
+
+This repo itself gets the guidelines through that global install; there is
+no copy at the repo root, so nothing loads twice when working here.
 
 ## Supported tools
 
@@ -144,6 +199,15 @@ description; the four manual-only skills also set
 (2026-10-05), which renamed the `CONTEXT.md`/`CONTEXT-MAP.md` convention to
 `GLOSSARY.md`/`GLOSSARY-MAP.md`; a project that already has a `CONTEXT.md`
 written by these skills needs `git mv CONTEXT.md GLOSSARY.md`.
+
+### From `multica-ai/andrej-karpathy-skills` (MIT)
+
+- `guidelines/AGENTS.md` — the four principles and the condensed examples
+  come from that repo's `CLAUDE.md` and `EXAMPLES.md`; the project-precedence
+  clause, the unattended-run clause in principle 1 and all of principle 5 are
+  mine. Upstream also ships
+  the same text as a Claude Code plugin and a Cursor rule; neither is used
+  here, since the block install above covers all three tools.
 
 ### From `anthropics/claude-code` (plugin `frontend-design`)
 
