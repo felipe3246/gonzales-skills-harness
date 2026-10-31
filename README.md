@@ -107,15 +107,13 @@ content: short behavioral rules that should be in context in **every**
 session, whichever tool is running. It is Andrej Karpathy's four principles
 (think before coding, simplicity first, surgical changes, goal-driven
 execution), each with a condensed example from the upstream `EXAMPLES.md`,
-plus a condensed **`ub-mode` coding contract** (First Make it Work → Then
-Make it Right → Practice) so coding workflow agents — including sub-agents
-spawned to implement, fix, refactor, or verify — inherit the same default
-without relying on skill auto-discovery alone. Full process detail stays in
-`skills/ub-mode/`; the guidelines only carry the short contract and the
-inheritance rule. Also included: a rule that a project's own instructions
-win over these guidelines when they contradict (Claude Code and Codex have
-no formal precedence between user-level and project files; only Kiro does),
-a rule for unattended runs, where the agent cannot stop to ask, and a fifth
+plus the short `ub-mode` coding contract and its sub-agent inheritance rule
+(see "From `unclebob/ub-mode`" below; the guidelines paragraph is the single
+source of that contract). Also included: a rule that a project's own
+instructions win over these guidelines when they contradict (Claude Code and
+Codex have no formal precedence between user-level and project files; only
+Kiro does), a rule for unattended runs, where the agent cannot stop to ask,
+a rule that skills never override the guidelines, and a fifth
 principle about deleting temporary work (scratch files, downloaded archives,
 throwaway clones, worktrees) before reporting done, and passing that
 instruction on to any sub-agent it spawns.
@@ -142,8 +140,7 @@ warning, and writes nothing.
 The file is deliberately small (~150 lines, still well under Codex's 32 KiB
 combined instruction-file cap): it costs tokens in every session. The full
 upstream `EXAMPLES.md` is ~500 lines and is not installed; the one-paragraph
-examples in the guidelines are condensed from it. The ub-mode block is a
-short contract only — the full skill stays on-demand.
+examples in the guidelines are condensed from it.
 
 This repo itself gets the guidelines through that global install; there is
 no copy at the repo root, so nothing loads twice when working here.
@@ -268,15 +265,16 @@ make your own call.
   [dryer](https://github.com/unclebob/dryer) /
   [mutator](https://github.com/unclebob/mutator) when installed, otherwise
   project equivalents); wired to `domain-modeling`, `verification-planning`,
-  and `codebase-design`; surgical scope on the "Make it Right" refactor;
-  commit/push follows the project's branch/PR conventions. A short contract
+  and `codebase-design`; redesign and "Make it Right" refactors stay inside
+  the touched scope; commit/push only when asked; cleanup follows guideline
+  principle 5. A short contract
   also lives in `guidelines/AGENTS.md` so coding workflow agents inherit it
   even when the skill is not explicitly invoked. Companion CLIs and
   [uml-viewer](https://github.com/unclebob/uml-viewer) are **not** installed
   by `setup.sh` — see "Suggested, not installed" below.
 
 Upstream ships no license file. Copied and adapted here, credited, for my own
-use in this private harness — not redistributed further as a verbatim fork.
+use in this harness — not redistributed further as a verbatim fork.
 If you're reading this from a public fork, don't assume that permission
 extends to you; go read the source and make your own call.
 
@@ -305,7 +303,7 @@ off documentation.
 | `ralph-loop` | Autonomous loop within a session; `/ralph-loop`, `/cancel-ralph` | `/plugin install ralph-loop@claude-plugins-official` | `codex plugin add ralph-loop@claude-plugins-official` | No equivalent |
 | `stripe` | Stripe integration: best practices, Connect, Apps, Metronome, test cards, docs.stripe.com | `/plugin install stripe@claude-plugins-official` | **Simpler:** `codex plugin add stripe@openai-api-curated` (already in OpenAI's own curated marketplace, no `marketplace add` step needed) | Skills bundled in `stripe/ai` (`providers/claude/plugin/skills/`) can be copied/symlinked manually into `.kiro/skills/` |
 | `superdesign` | Design canvas (Superdesign): pages, decks, posters, comparing models | `/plugin install superdesign@claude-plugins-official` | `codex plugin marketplace add superdesigndev/superdesign-skill`<br>`codex plugin add superdesign@superdesign` (the marketplace name comes from `plugin.json`, not the repo name) | No equivalent (tied to the canvas UI) |
-| `superpowers` | Broader process plugin (brainstorming, TDD, systematic debugging, code review, worktrees, etc.). Useful extras; **coding default in this harness is `ub-mode`**, not superpowers — keep both only if you want the wider playbook set | `/plugin install superpowers@claude-plugins-official` | **Simpler:** `codex plugin add superpowers@openai-api-curated` (already in OpenAI's curated marketplace) | Skills bundled in `obra/superpowers/skills/` can be copied/symlinked into `.kiro/skills/` |
+| `superpowers` | Broader process plugin (brainstorming, TDD, systematic debugging, code review, worktrees, etc.). Coding default here is `ub-mode`; its TDD and debugging skills slot in as techniques inside the matching ub-mode phase (rule in `guidelines/AGENTS.md`) | `/plugin install superpowers@claude-plugins-official` | **Simpler:** `codex plugin add superpowers@openai-api-curated` (already in OpenAI's curated marketplace) | Skills bundled in `obra/superpowers/skills/` can be copied/symlinked into `.kiro/skills/` |
 | `terraform` | MCP for the Terraform Registry / HCP Terraform (providers, modules, policies, workspaces) | `/plugin install terraform@claude-plugins-official` | `codex plugin add terraform@claude-plugins-official` | Add the Terraform MCP server to `.kiro/settings/mcp.json` |
 
 If `claude-plugins-official` isn't already registered as a marketplace on

@@ -2,7 +2,7 @@
 name: ub-mode
 description: >
   Default coding discipline for this harness. Every code change follows First
-  Make it Work, then Then Make it Right, then Practice. Use when the user runs
+  Make it Work, then Make it Right, then Practice. Use when the user runs
   /ub-mode, asks for these principles, or when implementing, fixing, refactoring,
   or verifying code — including when briefing a sub-agent whose job is coding.
 ---
@@ -59,17 +59,19 @@ Every non-trivial change follows:
 - Do not bolt a new requirement onto the old design.
 - Ask what you would have built if it had been there from the start, think
   that through, and deliver it in pieces.
+- Scope: this applies to the code the request already touches. It does not
+  license rewriting adjacent code that works (guidelines principles 2 and 3).
+  If the better design needs a wider change, propose it; do not do it.
 
 ## Attack the Premise
 
-- When two fixes that share one premise fail the same gate, write that premise
-  in one sentence and count which actors hold the imbalance.
-- Remove the assignment.
-- Do not start another fix until you have done that.
+- When two fixes fail the same check, stop. They share an assumption.
+- Write that assumption in one sentence and test it directly.
+- Do not attempt a third fix until the assumption is confirmed or dropped.
 
 ## Subtract Before You Add
 
-- Take complexity out before you add anything.
+- Take complexity out before you add anything — inside the touched scope.
 
 ## Outcome-Oriented Execution
 
@@ -175,8 +177,8 @@ guidelines: surgical changes). Do not clean the whole repository.
 
 ## Keep a Log
 
-- Keep a log of every action you take and the reason you took it.
-- Report that log upon completion.
+- Keep a short log of the decisions you made and why.
+- Report it upon completion, not every tool call.
 
 ## Guard the Context Window
 
@@ -185,21 +187,23 @@ guidelines: surgical changes). Do not clean the whole repository.
 
 ## Worktree Cleanup
 
-- Find what is safe to remove, confirm nothing still in use needs it, then
-  reclaim the disk (aligns with guideline principle 5).
+- Cleanup follows guideline principle 5 exactly: delete only scratch you
+  created; never user files, project files, dependency caches, or
+  tool-managed state. When in doubt, leave it and list the path.
 - Uncommitted work waits for a decision.
 
 ## Commit and Push
 
-- Commit often, in small ordered commits.
-- Each commit says why, what changed, and how you proved it.
-- Push according to the project's branching / PR conventions — not blindly to
-  the default branch when the workflow expects a feature branch or PR.
+- When the user asked for commits, or the project workflow expects them,
+  commit in small ordered commits. Each commit says why, what changed, and
+  how you proved it.
+- Otherwise leave the work uncommitted and say so in the report; committing
+  and pushing are the user's call.
+- Never push to the default branch unless explicitly told to.
 
 ## Briefing coding sub-agents
 
 When you spawn a sub-agent (or hand off) whose job is implementation, fixing,
-refactoring, or code verification, include in the brief:
-
-> Follow the `ub-mode` skill: First Make it Work, Then Make it Right, Practice.
-> Soft quality gates; surgical scope; project instructions win.
+refactoring, or code verification, copy the "Coding default (ub-mode)"
+paragraph from `guidelines/AGENTS.md` into the brief. That paragraph is the
+single source of the contract; do not paraphrase it here.

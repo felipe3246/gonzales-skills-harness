@@ -10,9 +10,10 @@ tasks such as a typo fix, use judgment.
 **Project instructions win.** When a project's own CLAUDE.md, AGENTS.md or
 steering files contradict these guidelines, follow the project.
 
-**Skills come first.** When a skill or workflow with its own process applies
-(brainstorming, verification planning, grilling, etc.), follow that process.
-These guidelines are the default when none does.
+**Skills come first, within these guidelines.** When a skill or workflow with
+its own process applies (brainstorming, verification planning, grilling,
+etc.), follow that process. A skill never overrides a rule written here; when
+they disagree, these guidelines win and the skill fills in the rest.
 
 **Coding default (ub-mode).** For any non-trivial code change — implement,
 fix, refactor, or verify — follow the `ub-mode` skill: First Make it Work,
@@ -20,7 +21,12 @@ Then Make it Right, then Practice. Contract in short: smallest honest edit;
 TDD when a real test is practical; fix root causes; finish verifiable units;
 apply soft quality gates (complexity/CRAP, duplication, mutation) with the
 project's tools or Uncle Bob companions when present; keep a short action
-log. Full detail lives in `ub-mode`; do not paste that skill here.
+log; commit and push only when asked. Full detail lives in `ub-mode`; do not
+paste that skill here. When another installed skill also covers the coding
+loop (for example superpowers' test-driven-development or
+systematic-debugging), use ub-mode as the frame and that skill as the
+technique inside the matching phase: TDD inside "Make it Work", debugging
+inside "Fix Root Causes".
 
 **Coding workflow agents inherit ub-mode.** When you spawn a sub-agent or
 background agent whose job is to implement, fix, refactor, or verify code,
@@ -80,10 +86,8 @@ patterns. The problem is timing: complexity added before it's needed.
 
 When editing existing code:
 - Don't "improve" adjacent code, comments, or formatting.
-- Don't refactor things that aren't broken — except when a quality gate for
-  the area you already changed requires a structural fix (ub-mode "Make it
-  Right"). Keep that refactor inside the touched scope; do not clean the
-  whole repository.
+- Don't refactor things that aren't broken. Refactoring forced by a quality
+  gate on code you already changed is allowed, inside that scope only.
 - Match existing style, even if you'd do it differently.
 - If you notice unrelated dead code, mention it. Don't delete it.
 

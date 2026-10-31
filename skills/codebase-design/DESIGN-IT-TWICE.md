@@ -29,9 +29,8 @@ Prompt each sub-agent with a separate technical brief (file paths, coupling deta
 
 Include both [SKILL.md](SKILL.md) vocabulary and GLOSSARY.md vocabulary in the brief so each sub-agent names things consistently with the architecture language and the project's domain language.
 
-These design sub-agents propose interfaces; they are not coding workflows.
-Do **not** put `ub-mode` in their brief. When a chosen design is later
-implemented, that implementation (or its coding sub-agent) follows `ub-mode`.
+These design sub-agents propose interfaces, not code; do **not** brief
+`ub-mode` here.
 
 Each sub-agent outputs:
 
