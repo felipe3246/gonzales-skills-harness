@@ -11,8 +11,9 @@ cross-wired to work the way I work, across whichever of **Claude Code**,
 - `skills/` — the canonical copy of every skill, one directory per skill,
   each with a `SKILL.md`. This is the only place you edit.
 - `guidelines/AGENTS.md` — always-on coding guidelines (Karpathy's four
-  principles plus my additions), installed into each tool's global
-  instruction file. Same rule: edit only here. See "Guidelines" below.
+  principles, the `ub-mode` coding contract for implementation workflows,
+  plus my additions), installed into each tool's global instruction file.
+  Same rule: edit only here. See "Guidelines" below.
 - `.claude/skills/`, `.agents/skills/`, `.kiro/skills/` — symlink farms so
   Claude Code, Codex, and Kiro each see the same skills without three copies
   of the content.
@@ -106,10 +107,13 @@ content: short behavioral rules that should be in context in **every**
 session, whichever tool is running. It is Andrej Karpathy's four principles
 (think before coding, simplicity first, surgical changes, goal-driven
 execution), each with a condensed example from the upstream `EXAMPLES.md`,
-plus three additions of mine: a rule that a project's own instructions win
-over these guidelines when they contradict (Claude Code and Codex have no
-formal precedence between user-level and project files; only Kiro does), a
-rule for unattended runs, where the agent cannot stop to ask, and a fifth
+plus the short `ub-mode` coding contract and its sub-agent inheritance rule
+(see "From `unclebob/ub-mode`" below; the guidelines paragraph is the single
+source of that contract). Also included: a rule that a project's own
+instructions win over these guidelines when they contradict (Claude Code and
+Codex have no formal precedence between user-level and project files; only
+Kiro does), a rule for unattended runs, where the agent cannot stop to ask,
+a rule that skills never override the guidelines, and a fifth
 principle about deleting temporary work (scratch files, downloaded archives,
 throwaway clones, worktrees) before reporting done, and passing that
 instruction on to any sub-agent it spawns.
@@ -133,11 +137,10 @@ and change nothing. `--dry-run` runs the same checks and prints either
 "sem mudanças" or which of the three actions it would take, including that
 warning, and writes nothing.
 
-The file is deliberately small (~130 lines, ~5 KB): it costs tokens in every
-session, and Codex caps the combined size of its instruction files at 32 KiB
-by default. The full upstream `EXAMPLES.md` is ~500 lines and is not
-installed; the one-paragraph examples in the guidelines are condensed from
-it.
+The file is deliberately small (~150 lines, still well under Codex's 32 KiB
+combined instruction-file cap): it costs tokens in every session. The full
+upstream `EXAMPLES.md` is ~500 lines and is not installed; the one-paragraph
+examples in the guidelines are condensed from it.
 
 This repo itself gets the guidelines through that global install; there is
 no copy at the repo root, so nothing loads twice when working here.
@@ -158,7 +161,8 @@ no copy at the repo root, so nothing loads twice when working here.
 | `drawio` | ✅ | ✅ (`argument-hint` is ignored; the body states the format convention) | ✅ | Native `.drawio` output with official AWS icons. PNG/SVG/PDF export and Mermaid conversion need the draw.io Desktop CLI; without it the skill still delivers the `.drawio`. `scripts/validate-drawio.sh` needs `python3` (`xmllint` optional). Trigger overlap with `diagram-design` on "architecture/flowchart": drawio keys on `.drawio`/AWS icons, diagram-design on HTML/SVG |
 | `skill-creator` | ✅ (already ships "Claude.ai-specific" and "Cowork-specific" sections) | ✅ for the core loop; the parallel eval step depends on sub-agents | ✅ | — |
 | `frontend-design` | ✅ | ✅ | ✅ | Plain prose, no tool-specific dependency |
-| `verification-planning` | ✅ | ✅ (frontmatter only has `name`+`description`, no Claude-only field) | ✅ | References `@librarian` — a project-specific agent/skill mention. Only resolves if something named `librarian` exists in the harness running it; otherwise step 4 (research) loses that shortcut and needs another path |
+| `verification-planning` | ✅ | ✅ (frontmatter only has `name`+`description`, no Claude-only field) | ✅ | References `@librarian` — a project-specific agent/skill mention. Only resolves if something named `librarian` exists in the harness running it; otherwise step 4 (research) loses that shortcut and needs another path. Points at `ub-mode` for the coding loop after the evidence path is set |
+| `ub-mode` | ✅ | ✅ (`agents/openai.yaml` display metadata only; may be auto-invoked for coding) | ✅ | Default coding discipline. Soft gates (crapper/dryer/mutator or project equivalents). Also contracted in `guidelines/AGENTS.md` so coding sub-agents inherit it |
 
 `disable-model-invocation` and `argument-hint` are Claude Code extensions that
 **don't exist** in the open spec or in Codex's parser — Codex silently ignores
@@ -204,10 +208,11 @@ written by these skills needs `git mv CONTEXT.md GLOSSARY.md`.
 
 - `guidelines/AGENTS.md` — the four principles and the condensed examples
   come from that repo's `CLAUDE.md` and `EXAMPLES.md`; the project-precedence
-  clause, the unattended-run clause in principle 1 and all of principle 5 are
-  mine. Upstream also ships
-  the same text as a Claude Code plugin and a Cursor rule; neither is used
-  here, since the block install above covers all three tools.
+  clause, the unattended-run clause in principle 1, all of principle 5, the
+  ub-mode coding contract, and the coding-workflow-agent inheritance rule are
+  mine (ub-mode detail credited separately below). Upstream also ships the
+  same Karpathy text as a Claude Code plugin and a Cursor rule; neither is
+  used here, since the block install above covers all three tools.
 
 ### From `anthropics/claude-code` (plugin `frontend-design`)
 
@@ -237,7 +242,8 @@ written by these skills needs `git mv CONTEXT.md GLOSSARY.md`.
 - `verification-planning/` — verification planning for non-trivial coding
   work: forces building an "evidence path" (what must become true, how the
   system can reveal that, when to add a verification affordance, when to
-  research before committing to an approach) before implementing.
+  research before committing to an approach) before implementing. Adapted
+  here to hand off execution to `ub-mode` once the path is set.
 - `reflect/` — kept for the record but deliberately excluded from the symlink
   farms and from `setup.sh` (see "How it works" above): its body targets
   OpenCode specifically.
@@ -249,6 +255,28 @@ them. I'm keeping both as-is anyway, credited, in a private repo for my own
 use — not redistributing them further. If you're reading this from a public
 fork, don't assume that permission extends to you; go read the source and
 make your own call.
+
+### From `unclebob/ub-mode`
+
+- `ub-mode/` — default coding discipline (First Make it Work → Then Make it
+  Right → Practice), loosely based on poteto-mode/pstack principles and paired
+  upstream with deterministic quality-gate tools. Adapted for this harness:
+  soft gates (use [crapper](https://github.com/unclebob/crapper) /
+  [dryer](https://github.com/unclebob/dryer) /
+  [mutator](https://github.com/unclebob/mutator) when installed, otherwise
+  project equivalents); wired to `domain-modeling`, `verification-planning`,
+  and `codebase-design`; redesign and "Make it Right" refactors stay inside
+  the touched scope; commit/push only when asked; cleanup follows guideline
+  principle 5. A short contract
+  also lives in `guidelines/AGENTS.md` so coding workflow agents inherit it
+  even when the skill is not explicitly invoked. Companion CLIs and
+  [uml-viewer](https://github.com/unclebob/uml-viewer) are **not** installed
+  by `setup.sh` — see "Suggested, not installed" below.
+
+Upstream ships no license file. Copied and adapted here, credited, for my own
+use in this harness — not redistributed further as a verbatim fork.
+If you're reading this from a public fork, don't assume that permission
+extends to you; go read the source and make your own call.
 
 ## Plugins I pair with this
 
@@ -275,7 +303,7 @@ off documentation.
 | `ralph-loop` | Autonomous loop within a session; `/ralph-loop`, `/cancel-ralph` | `/plugin install ralph-loop@claude-plugins-official` | `codex plugin add ralph-loop@claude-plugins-official` | No equivalent |
 | `stripe` | Stripe integration: best practices, Connect, Apps, Metronome, test cards, docs.stripe.com | `/plugin install stripe@claude-plugins-official` | **Simpler:** `codex plugin add stripe@openai-api-curated` (already in OpenAI's own curated marketplace, no `marketplace add` step needed) | Skills bundled in `stripe/ai` (`providers/claude/plugin/skills/`) can be copied/symlinked manually into `.kiro/skills/` |
 | `superdesign` | Design canvas (Superdesign): pages, decks, posters, comparing models | `/plugin install superdesign@claude-plugins-official` | `codex plugin marketplace add superdesigndev/superdesign-skill`<br>`codex plugin add superdesign@superdesign` (the marketplace name comes from `plugin.json`, not the repo name) | No equivalent (tied to the canvas UI) |
-| `superpowers` | The process framework this repo's skills lean on: brainstorming, TDD, systematic debugging, code review, worktrees, etc. | `/plugin install superpowers@claude-plugins-official` | **Simpler:** `codex plugin add superpowers@openai-api-curated` (already in OpenAI's curated marketplace) | Skills bundled in `obra/superpowers/skills/` can be copied/symlinked into `.kiro/skills/` |
+| `superpowers` | Broader process plugin (brainstorming, TDD, systematic debugging, code review, worktrees, etc.). Coding default here is `ub-mode`; its TDD and debugging skills slot in as techniques inside the matching ub-mode phase (rule in `guidelines/AGENTS.md`) | `/plugin install superpowers@claude-plugins-official` | **Simpler:** `codex plugin add superpowers@openai-api-curated` (already in OpenAI's curated marketplace) | Skills bundled in `obra/superpowers/skills/` can be copied/symlinked into `.kiro/skills/` |
 | `terraform` | MCP for the Terraform Registry / HCP Terraform (providers, modules, policies, workspaces) | `/plugin install terraform@claude-plugins-official` | `codex plugin add terraform@claude-plugins-official` | Add the Terraform MCP server to `.kiro/settings/mcp.json` |
 
 If `claude-plugins-official` isn't already registered as a marketplace on
@@ -283,6 +311,17 @@ your Claude Code install, run `/plugin marketplace add
 anthropics/claude-plugins-official` first.
 
 ## Suggested, not installed
+
+- **Uncle Bob quality gates** (companions to `ub-mode`) — install yourself if
+  you want the hard gates instead of project equivalents:
+  - [`crapper`](https://github.com/unclebob/crapper) — CRAP / complexity /
+    coverage per function
+  - [`dryer`](https://github.com/unclebob/dryer) — structural duplication
+  - [`mutator`](https://github.com/unclebob/mutator) — mutation testing
+  - [`uml-viewer`](https://github.com/unclebob/uml-viewer) — live UML /
+    coverage / CRAP / mutation view
+
+  `ub-mode` treats these as optional: same intent, soft fallback when missing.
 
 - **[`humanizer`](https://github.com/blader/humanizer)** (MIT) — rewrites
   AI-sounding text (not-X-but-Y contrasts, one-line closers, forced triads,

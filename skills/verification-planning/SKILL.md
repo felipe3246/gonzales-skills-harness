@@ -94,6 +94,12 @@ structural changes whose sole purpose is evidence gathering.
 **Complete when:** the path can be followed without guessing about setup,
 state, or interpretation.
 
+## Between 5 and 6: implement under ub-mode
+
+This skill owns the evidence path, not the coding loop. Implementation (in
+this session or via a coding sub-agent) follows `ub-mode`, using this plan's
+checks as its verification side.
+
 ## 6. Close the evidence path
 
 After implementation, follow the planned path and interpret the resulting

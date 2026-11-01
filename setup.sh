@@ -37,11 +37,11 @@ EXCLUDE_SKILLS=("reflect")
 # directory is its own (safe to refresh); its content is the source path.
 MARKER=".installed-from"
 
-# Always-on guidelines (Karpathy's four principles plus additions). Installed
-# as a block delimited by these two markers inside each harness's global
-# instruction file, so it can coexist with blocks written by other tools (the
-# context7 plugin writes one into ~/.codex/AGENTS.md, for example) and be
-# replaced in place on re-run.
+# Always-on guidelines (Karpathy principles + ub-mode coding contract +
+# additions). Installed as a block delimited by these two markers inside each
+# harness's global instruction file, so it can coexist with blocks written by
+# other tools (the context7 plugin writes one into ~/.codex/AGENTS.md, for
+# example) and be replaced in place on re-run.
 GUIDELINES_SRC="$REPO_ROOT/guidelines/AGENTS.md"
 G_START='<!-- project-guidelines:start -->'
 G_END='<!-- project-guidelines:end -->'
@@ -56,7 +56,7 @@ PLUGINS_MODE="ask"   # ask | yes | no
 DRY_RUN=false
 ANY_FLAG=false
 
-usage() { sed -n '2,15p' "$0" | sed 's/^# //; s/^#//'; }
+usage() { sed -n '/^# Usage:/,/^#$/p' "$0" | sed 's/^# //; s/^#//'; }
 
 for arg in "$@"; do
   case "$arg" in
