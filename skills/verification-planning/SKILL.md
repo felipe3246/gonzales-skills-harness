@@ -105,6 +105,13 @@ known facts from remaining uncertainty.
 **Complete when:** a future reader can see what supports the conclusion and
 what remains outside its reach.
 
+## After the plan: execute under ub-mode
+
+This skill owns the evidence path, not the coding loop. When implementation
+starts (in this session or via a coding sub-agent), follow the `ub-mode`
+skill: First Make it Work, Then Make it Right, Practice — using this plan's
+checks as the verification side of that loop.
+
 ## Scope
 
 Use this skill proportionately. Small mechanical changes can follow ordinary

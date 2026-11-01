@@ -6,6 +6,10 @@
 # Codex, and/or Kiro, and optionally installs the curated plugins for Claude
 # Code and Codex. Kiro has no plugin system, so it only gets skills.
 #
+# Coding default: skills/ub-mode is a normal skill (not in EXCLUDE_SKILLS) and
+# is also contracted in guidelines/AGENTS.md so coding workflow agents inherit
+# Work → Right → Practice. Re-run this script after editing either.
+#
 # Usage:
 #   ./setup.sh                          interactive menu
 #   ./setup.sh --all                    all three tools, skills only
@@ -37,11 +41,12 @@ EXCLUDE_SKILLS=("reflect")
 # directory is its own (safe to refresh); its content is the source path.
 MARKER=".installed-from"
 
-# Always-on guidelines (Karpathy's four principles plus additions). Installed
-# as a block delimited by these two markers inside each harness's global
-# instruction file, so it can coexist with blocks written by other tools (the
-# context7 plugin writes one into ~/.codex/AGENTS.md, for example) and be
-# replaced in place on re-run.
+# Always-on guidelines (Karpathy principles + ub-mode coding contract +
+# additions). Installed as a block delimited by these two markers inside each
+# harness's global instruction file, so it can coexist with blocks written by
+# other tools (the context7 plugin writes one into ~/.codex/AGENTS.md, for
+# example) and be replaced in place on re-run.
+# CODING_DEFAULT_SKILL=ub-mode  # discovery installs it; contract lives in AGENTS.md
 GUIDELINES_SRC="$REPO_ROOT/guidelines/AGENTS.md"
 G_START='<!-- project-guidelines:start -->'
 G_END='<!-- project-guidelines:end -->'

@@ -9,6 +9,10 @@ Write a handoff document summarising the current conversation so a fresh agent c
 
 Include a "suggested skills" section in the document, naming which skills the next agent should call the Skill tool for.
 
+If the next session will continue implementation, fixing, refactoring, or code
+verification, name `ub-mode` in that section and state that coding should
+continue under First Make it Work → Then Make it Right → Practice.
+
 Do not duplicate content already captured in other artifacts (specs, plans, ADRs, issues, commits, diffs). Reference them by path or URL instead.
 
 Redact any sensitive information, such as API keys, passwords, or personally identifiable information.

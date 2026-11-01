@@ -7,12 +7,26 @@ observations on LLM coding pitfalls, via multica-ai/andrej-karpathy-skills
 **Tradeoff:** these guidelines bias toward caution over speed. For trivial
 tasks such as a typo fix, use judgment.
 
-**Skills come first.** When a skill or workflow with its own process applies
-(brainstorming, test-driven development, systematic debugging, verification),
-follow that process. These guidelines are the default when none does.
-
 **Project instructions win.** When a project's own CLAUDE.md, AGENTS.md or
 steering files contradict these guidelines, follow the project.
+
+**Skills come first.** When a skill or workflow with its own process applies
+(brainstorming, verification planning, grilling, etc.), follow that process.
+These guidelines are the default when none does.
+
+**Coding default (ub-mode).** For any non-trivial code change — implement,
+fix, refactor, or verify — follow the `ub-mode` skill: First Make it Work,
+Then Make it Right, then Practice. Contract in short: smallest honest edit;
+TDD when a real test is practical; fix root causes; finish verifiable units;
+apply soft quality gates (complexity/CRAP, duplication, mutation) with the
+project's tools or Uncle Bob companions when present; keep a short action
+log. Full detail lives in `ub-mode`; do not paste that skill here.
+
+**Coding workflow agents inherit ub-mode.** When you spawn a sub-agent or
+background agent whose job is to implement, fix, refactor, or verify code,
+put the ub-mode contract in its brief. Research, grilling, teaching, and
+diagram agents do not need it. Sub-agents may not load these guidelines —
+state the contract explicitly (same idea as principle 5 for cleanup).
 
 ## 1. Think Before Coding
 
@@ -66,7 +80,10 @@ patterns. The problem is timing: complexity added before it's needed.
 
 When editing existing code:
 - Don't "improve" adjacent code, comments, or formatting.
-- Don't refactor things that aren't broken.
+- Don't refactor things that aren't broken — except when a quality gate for
+  the area you already changed requires a structural fix (ub-mode "Make it
+  Right"). Keep that refactor inside the touched scope; do not clean the
+  whole repository.
 - Match existing style, even if you'd do it differently.
 - If you notice unrelated dead code, mention it. Don't delete it.
 
@@ -74,7 +91,8 @@ When your changes create orphans:
 - Remove imports/variables/functions that YOUR changes made unused.
 - Don't remove pre-existing dead code unless asked.
 
-The test: every changed line should trace directly to the user's request.
+The test: every changed line should trace directly to the user's request
+(or to a gate forced by that request's diff).
 
 Example. Request: "Add logging to the upload function."
 - Wrong: add logging, and also switch quotes to double, add type hints and
